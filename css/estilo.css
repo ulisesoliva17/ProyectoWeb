@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+  header .conjunto {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 5px; }
+    header .conjunto .logo {
+      text-decoration: none;
+    }
+      header .conjunto .logo img {
+        width: 50px; }
+    header .conjunto .titulo h1{
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 1px; }
+      header .conjunto .titulo h1 a {
+        padding-left: 10px;
+        text-decoration: none;
+        list-style: none;
+        color: #000; }
+        header .conjunto .titulo h1 a #title {
+          font-family: 'Bebas Neue', cursive; }
+        header .conjunto .titulo h1 a:visited {
+          color: #000; }
+  
+  header .lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+    list-style: none; }
+    header .lista .link {
+      position: relative;
+      display: block;
+      color: #000;
+      padding: 15px 13px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      cursor: pointer;
+      width: fit-content;
+      margin: 0 auto 20px;
+      z-index: 0;
+      transition: all 450ms ease; }
+      header .lista .link::after, header .lista .link::before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 300ms ease; }
+      header .lista .link:visited {
+        color: #000; }
+    header .lista .link--1 {
+      padding: 0 15px; }
+      header .lista .link--1::before, header .lista .link--1::after {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1rem;
+        width: 0; }
+      header .lista .link--1::before {
+        left: 0; }
+      header .lista .link--1::after {
+        background-color: #c797eb;
+        right: 0; }
+      header .lista .link--1:hover {
+        color: #c797eb; }
+        header .lista .link--1:hover::before {
+          width: 60%;
+          transition: width 250ms ease;
+          background-color: #c797eb; }
+        header .lista .link--1:hover::after {
+          width: 100%;
+          background-color: transparent; }
+  
+  img {
+    width: 200px; }
