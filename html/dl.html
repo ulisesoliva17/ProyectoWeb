@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Aprendiendo IA">
+    <meta name="keywords" content="Inteligencia, open-ia, learning, machine, deeplearning">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>FAI-AI</title>
+</head>
+
+<body>
+    <!--------------------------------------HEADER PROPIA DE LA WEB------------------------------------------------------------>
+    <header>
+        <div class="conjunto">
+            <div class="logo">
+                    <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+            </div>
+            <div class="titulo">
+                <h1> <a href="../index.html">FAI-AI</a> </h1>
+            </div>
+        </div>
+        <nav>
+            <ul class="lista">
+                <li><a class="link link--1" href="../index.html">Principal</a></li>
+                <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+                <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+            </ul>
+        </nav>
+    </header>
+<!----------------------------------------------CUERPO DEL INDEX---------------------------------------------------------------->
+<main id="main-dl">
+    <!-- Hero -->
+    <h1 id="dl-h1">🧠 Deep Learning
+      <span>El corazón de la IA moderna</span>
+    </h1>
+    <p>
+      El deep learning está en todas partes: desde el reconocimiento facial en tu teléfono hasta los subtítulos automáticos de YouTube o los generadores de imágenes como Stable Diffusion. Se trata de una rama del <em>machine learning</em> que utiliza redes neuronales profundas para aprender de grandes volúmenes de datos y resolver problemas antes imposibles.
+    </p>
+
+    <!-- Cómo funciona -->
+    <section id="descripcion">
+      <h2 id="descripcion-h2">⚙️ Cómo funciona</h2>
+      <p>
+        Las redes neuronales profundas imitan el funcionamiento del cerebro humano. Están formadas por capas de nodos interconectados (neuronas artificiales) que procesan información de manera jerárquica.
+      </p>
+      <ul id="descripcion-lista">
+        <li>🔄 <strong>Propagación hacia adelante:</strong> la red genera una predicción.</li>
+        <li>🛠️ <strong>Retropropagación:</strong> ajusta sus parámetros corrigiendo errores.</li>
+        <li>⚡ <strong>Alta demanda computacional:</strong> suelen entrenarse en GPUs con frameworks como TensorFlow, PyTorch o JAX.</li>
+      </ul>
+      <p>💡 <strong>Dato clave:</strong> entrenar un modelo es costoso en tiempo y recursos, pero una vez entrenado puede responder en milisegundos.</p>
+    </section>
+
+    <!-- Modelos principales -->
+    <section id="modelos">
+      <h2 id="modelos-h2">🧬 Modelos principales</h2>
+      <div id="modelos-cajas">
+        <!-- CNN -->
+        <article>
+          <div>
+            <span>CNN</span>
+            <div>
+              <span>Visión</span>
+              <span>Clasificación</span>
+              <span>Detección</span>
+            </div>
+          </div>
+          <h3>Convolutional Neural Networks</h3>
+          <p>Visión artificial</p>
+          <p>Detecta patrones en imágenes. Se usa en reconocimiento facial y vehículos autónomos.</p>
+        </article>
+        <!-- RNN/LSTM/GRU -->
+        <article>
+          <div>
+            <span>RNN / LSTM / GRU</span>
+            <div>
+              <span>Secuencias</span>
+              <span>Audio</span>
+              <span>Texto</span>
+            </div>
+          </div>
+          <h3>Redes Recurrentes</h3>
+          <p>Lenguaje y secuencias</p>
+          <p>Maneja información temporal como texto o audio.</p>
+        </article>
+        <!-- Transformers -->
+        <article>
+          <div>
+            <span>Transformers</span>
+            <div>
+              <span>PLN</span>
+              <span>Codificación</span>
+              <span>Traducción</span>
+            </div>
+          </div>
+          <h3>Mecanismo de Atención</h3>
+          <p>Procesamiento de texto</p>
+          <p>Base de modelos como GPT o BERT; procesan en paralelo con <em>attention mechanisms</em>.</p>
+        </article>
+        <!-- VAE -->
+        <article>
+          <div>
+            <span>VAE</span>
+            <div>
+              <span>Latentes</span>
+              <span>Compresión</span>
+              <span>Sampling</span>
+            </div>
+          </div>
+          <h3>Variational Autoencoders</h3>
+          <p>IA generativa</p>
+          <p>Comprimen y generan variaciones de datos; base de GANs y modelos de difusión.</p>
+        </article>
+        <!-- GANs -->
+        <article>
+          <div>
+            <span>GANs</span>
+            <div>
+              <span>Generación</span>
+              <span>Imagen</span>
+              <span>Video</span>
+            </div>
+          </div>
+          <h3>Generative Adversarial Networks</h3>
+          <p>Imágenes realistas</p>
+          <p>Dos redes en competencia: generador vs discriminador.</p>
+        </article>
+        <!-- Difusión -->
+        <article>
+          <div>
+            <span>Difusión</span>
+            <div>
+              <span>Imagen</span>
+              <span>Síntesis</span>
+              <span>Creatividad</span>
+            </div>
+          </div>
+          <h3>Modelos de difusión</h3>
+          <p>Imágenes de alta calidad</p>
+          <p>Como Stable Diffusion o Imagen; añaden y eliminan ruido hasta crear resultados fotorrealistas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Casos de uso -->
+    <section aria-labelledby="casos">
+      <h2 id="casos">🚀 Casos de uso en el mundo real</h2>
+      <div>
+        <div>
+          <h3>🏭 Industria</h3>
+          <p>Inspección de productos, mantenimiento predictivo.</p>
+        </div>
+        <div>
+          <h3>🏥 Salud</h3>
+          <p>Detección temprana de cáncer en imágenes médicas.</p>
+        </div>
+        <div>
+          <h3>💬 Atención al cliente</h3>
+          <p>Chatbots y asistentes virtuales.</p>
+        </div>
+        <div>
+          <h3>💳 Finanzas</h3>
+          <p>Detección de fraudes y predicción de riesgos.</p>
+        </div>
+        <div>
+          <h3>🎨 Creatividad</h3>
+          <p>Arte, música, doblaje automático y videojuegos.</p>
+        </div>
+        <div>
+          <h3>🌱 Medio ambiente</h3>
+          <p>Predicción climática y optimización energética.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áreas destacadas -->
+    <section aria-labelledby="areas">
+      <h2 id="areas">🌟 Áreas destacadas</h2>
+      <div>
+        <div>
+          <h3>🗣 Procesamiento del Lenguaje Natural (PLN)</h3>
+          <p>El PLN permite que las máquinas comprendan y produzcan lenguaje humano.</p>
+          <p><strong>Ejemplos:</strong> traducción automática, análisis de sentimientos, generación de texto y asistentes de voz como Siri o Alexa.</p>
+        </div>
+        <div>
+          <h3>🌐 IA Generativa</h3>
+          <p>Quizás la más revolucionaria. Los modelos generativos crean contenido nuevo —texto, imágenes, música o código— a partir de ejemplos previos.</p>
+          <div>
+            <strong>Aplicaciones:</strong>
+            <ul>
+              <li>Marketing (textos creativos).</li>
+              <li>Desarrollo de software (autocompletar código).</li>
+              <li>Entretenimiento (música o personajes virtuales).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ventajas, desafíos y futuro -->
+    <section aria-labelledby="ventajas">
+      <h2 id="ventajas">🔮 Ventajas, desafíos y futuro</h2>
+      <div>
+        <div>
+          <h3>✔ Ventajas</h3>
+          <ul>
+            <li>Precisión en tareas complejas</li>
+            <li>Escalabilidad</li>
+            <li>Automatización</li>
+          </ul>
+        </div>
+        <div>
+          <h3>⚠ Desafíos</h3>
+          <ul>
+            <li>Necesidad de datos masivos</li>
+            <li>Sesgos</li>
+            <li>Alto consumo energético</li>
+          </ul>
+        </div>
+        <div>
+          <h3>🌍 Impacto social</h3>
+          <ul>
+            <li>Oportunidades laborales</li>
+            <li>Dilemas éticos (fake news, deepfakes, privacidad)</li>
+          </ul>
+          <p>El futuro del deep learning no está solo en hacerlo más potente, sino también en hacerlo más transparente, eficiente y responsable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section aria-labelledby="cta">
+      <div>
+        <div>
+          <h3 id="cta">¿Listo para construir con Deep Learning?</h3>
+          <p>Explora notebooks, datasets y guías prácticas para llevar tus ideas a producción.</p>
+        </div>
+        <div>
+          <a href="#">Ver ejemplos</a>
+          <a href="#">Documentación</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
