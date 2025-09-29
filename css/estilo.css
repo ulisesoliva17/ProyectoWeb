@@ -10,6 +10,13 @@
       );
       background-attachment:fixed;
 }
+/*Agregado 29/09*/
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
   header .conjunto {
     display: flex;
     align-items: center;
@@ -54,7 +61,7 @@
       margin: 0 auto 20px;
       z-index: 0;
       transition: all 450ms ease; 
-    }
+    }/*
       header .lista .link::after, header .lista .link::before {
         content: '';
         display: block;
@@ -65,14 +72,15 @@
         color: #000;
        }
     header .lista .link--1 {
-      padding: 0 15px; }
+      padding: 0 15px; 
+    }
       header .lista .link--1::before, header .lista .link--1::after {
         top: 0;
         bottom: 0;
         margin: auto 0;
         height: 0.1rem;
         width: 0; 
-      }
+      }*/
   /*REVEER ESTO PARA QUE NO SE DEFORME*/
   img {
     width: 200px;
