@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Machine Learning - conceptos, tipos, casos de uso y algoritmos" />
+  <meta name="keywords" content="Machine Learning, Aprendizaje Supervisado, No Supervisado, Refuerzo, IA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <title>FAI-AI — Machine Learning</title>
+</head>
+<body>
+  <!-- HEADER (estilo del archivo de ejemplo) -->
+  <header>
+    <div class="conjunto">
+      <div class="logo">
+        <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+      </div>
+      <div class="titulo">
+        <h1><a href="../index.html">FAI-AI</a></h1>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="lista">
+        <li><a class="link link--1" href="../index.html">Principal</a></li>
+        <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+        <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-dl">
+    <!-- Hero -->
+    <h1 id="dl-h1">Machine Learning
+      <span>La rama práctica de la inteligencia artificial</span>
+    </h1>
+
+    <p>
+      El <strong>machine learning</strong> es una rama de la inteligencia artificial (IA) centrada en entrenar computadoras y máquinas para imitar el modo en que aprenden los humanos, realizar tareas de forma autónoma y mejorar su rendimiento y precisión a través de la experiencia y la exposición a más datos.
+    </p>
+
+    <!-- Tipos -->
+    <section id="modelo">
+      <h2 id="modelo-h2">Tipos de aprendizaje</h2>
+    <div id="modelos-cajas">
+      <article class="card">
+        <h3>Aprendizaje Supervisado</h3>
+        <p>
+          El aprendizaje supervisado, también conocido como <em>machine learning supervisado</em>, se define por el uso de conjuntos de datos etiquetados para entrenar algoritmos para clasificar datos o predecir resultados con precisión.
+        </p>
+        <p>
+          A medida que los datos de entrada se introducen en el modelo, este ajusta sus pesos hasta que se ajustan adecuadamente. Esto ocurre como parte del proceso de validación cruzada para garantizar que el modelo evite el sobreajuste o el subajuste.
+        </p>
+        <p>
+          El aprendizaje supervisado ayuda a resolver problemas del mundo real a escala —por ejemplo, clasificar el spam— y emplea métodos como redes neuronales, Naïve Bayes, regresión lineal, regresión logística, bosque aleatorio y máquinas de vectores de soporte (SVM).
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Aprendizaje No Supervisado</h3>
+        <p>
+          El aprendizaje no supervisado utiliza algoritmos de machine learning para analizar y agrupar conjuntos de datos sin etiquetar (clústeres). Estos algoritmos descubren patrones ocultos o agrupaciones sin intervención humana.
+        </p>
+        <p>
+          Es ideal para análisis exploratorio de datos, segmentación de clientes, estrategias de venta cruzada, reconocimiento de imágenes y reducción de dimensionalidad.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Aprendizaje por Refuerzo</h3>
+        <p>
+          El aprendizaje por refuerzo es similar al supervisado en su objetivo de optimizar decisiones, pero no se entrena con ejemplos etiquetados. El agente aprende mediante prueba y error, recibiendo recompensas por acciones exitosas y buscando maximizar una política a lo largo del tiempo.
+        </p>
+        <p>
+          Se aplica en juegos, control robótico, sistemas de recomendación que optimizan secuencias de decisiones y problemas donde la retroalimentación viene en forma de recompensa diferida.
+        </p>
+      </article>
+      </div>
+    </section>
+
+    <!-- Separador -->
+    <hr />
+
+    <!-- Casos de uso -->
+    <section id="modelos">
+      <h2 id="modelos-h2">Casos de uso de machine learning en el mundo real</h2>
+
+      <div id="modelos-cajas"> <!-- div class="grid-casos" -->
+        <div class="caso">
+          <h3>Reconocimiento de voz</h3>
+          <p>
+            También llamado reconocimiento automático de voz (ASR). Utiliza procesamiento de lenguaje natural (PLN) para convertir habla en texto. Está presente en asistentes y búsquedas por voz (por ejemplo, Siri).
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Atención al cliente</h3>
+          <p>
+            Chatbots y agentes virtuales automatizan respuestas frecuentes, ofrecen asesoramiento, sugerencias y realizan venta cruzada en plataformas de e-commerce y redes sociales.
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Visión artificial</h3>
+          <p>
+            Permite extraer información de imágenes y vídeo. Aplicaciones: etiquetado de fotos, imágenes radiológicas en salud y vehículos autónomos.
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Motores de recomendación</h3>
+          <p>
+            Usan datos de comportamiento para sugerir productos relevantes y mejorar conversiones en minoristas online.
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Automatización Robótica de Procesos (RPA)</h3>
+          <p>
+            Robótica de software que automatiza tareas manuales y repetitivas combinando reglas y ML para decisiones más inteligentes.
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Negociación de acciones automatizada</h3>
+          <p>
+            Plataformas de trading de alta frecuencia y optimización de carteras que ejecutan operaciones sin intervención humana.
+          </p>
+        </div>
+
+        <div class="caso">
+          <h3>Detección de fraudes</h3>
+          <p>
+            Los bancos entrenan modelos supervisados con transacciones fraudulentas conocidas; la detección de anomalías identifica operaciones atípicas para investigar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algoritmos -->
+    <section id="modelos">
+      <h2 id="modelos-h2">Algoritmos más comunes de machine learning</h2>
+        <div id="modelos-cajas">
+      <!--
+      <p>Existen numerosos algoritmos empleados habitualmente:</p>
+      <ul>
+        <li>Redes neuronales</li>
+        <li>Regresión lineal</li>
+        <li>Regresión logística</li>
+        <li>Agrupación en clústeres</li>
+        <li>Árboles de decisión</li>
+        <li>Bosques aleatorios</li>
+      </ul>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Redes neuronales</h3>
+        <p>
+          Simulan el funcionamiento del cerebro con nodos interconectados. Son excelentes para reconocer patrones y se usan en traducción, reconocimiento de imágenes, voz y generación de contenido.
+        </p>
+        </div>
+      <!--</article>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Regresión lineal</h3>
+        <p>
+          Se emplea para predecir valores numéricos basados en relaciones lineales entre variables (ej.: predicción de precios de viviendas).
+        </p>
+        </div>
+      <!--</article>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Regresión logística</h3>
+        <p>
+          Algoritmo supervisado para predecir variables categóricas (sí/no). Usado en clasificación de spam, control de calidad, entre otros.
+        </p>
+        </div>
+      <!--</article>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Agrupación en clústeres</h3>
+        <p>
+          Algoritmos no supervisados que identifican agrupaciones y diferencias en datos sin etiquetas, útiles en segmentación de clientes y análisis exploratorio.
+        </p>
+        </div>
+      <!--</article>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Árboles de decisión</h3>
+        <p>
+          Modelos interpretables que representan decisiones en forma de árbol. Pueden usarse para clasificación y regresión; fáciles de validar y auditar.
+        </p>
+        </div>
+      <!--</article>-->
+
+      <!--<article class="algoritmo">-->
+        <div>
+        <h3>Bosques aleatorios</h3>
+        <p>
+          Conjuntos de árboles de decisión que combinan múltiples predictores para mejorar la robustez y reducir el sobreajuste.
+        </p>
+        </div>
+        </div>
+      <!--</article>-->
+    </section>
+
+    <!-- Ventajas y desafíos -->
+    <section id="section-areas">
+      <h2 id="ventajas">Ventajas, desafíos e impacto</h2>
+      <div id="VD-Grid">
+        <div id= "area-card">
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Precisión en tareas complejas</li>
+            <li>Escalabilidad</li>
+            <li>Automatización de procesos</li>
+          </ul>
+        </div>
+
+        <div id= "area-card">
+          <h3>Desafíos</h3>
+          <ul>
+            <li>Necesidad de datos masivos</li>
+            <li>Sesgos en los datos y modelos</li>
+            <li>Alto consumo energético</li>
+          </ul>
+        </div>
+
+        <div id= "area-card">
+          <h3>Impacto social</h3>
+          <ul>
+            <li>Oportunidades y transformación laboral</li>
+            <li>Dilemas éticos: privacidad, deepfakes y desinformación</li>
+          </ul>
+          <p>El reto es hacer que el machine learning sea más transparente, eficiente y responsable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie / CTA breve -->
+    <footer id="ml-footer">
+      <p>
+
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
