@@ -19,6 +19,7 @@ body {
 
 /*Agregado 29/09*/
 header {
+  background: radial-gradient(circle at center, #00ffd5, #8c52ff);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -114,7 +115,7 @@ img {
 }
 
 #descripcion-h2 {
-  background-color: #726eff;
+  color: #08C6AB;
 }
 
 #descripcion-lista {
@@ -128,11 +129,19 @@ img {
 }
 
 #modelos-h2 {
-  background-color: #08C6AB;
+  color: #08C6AB;
 }
 
 #modelos-cajas {
-  border: 1px solid #e5e7eb;
+  border: 2px solid transparent;
+  background-image: linear-gradient(45deg,
+    #0d1117 0%,         /* azul oscuro casi negro en el top */
+    #0f2233 20%,        /* azul profundo */
+    #1b1d3b 55%,        /* transición hacia púrpura */
+    #2a0845 100%        /* violeta/morado profundo abajo */),
+                    linear-gradient(220deg, #00ffd5, #8c52ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-top: 1.5rem;
@@ -146,15 +155,15 @@ img {
 
 #modelos-cajas>article {
   /*border: 1px solid #e5e7eb;*/
-  background: #00183a; /* color interno oscuro #00183a */
+  background: #00337a; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
   border-radius: 12px;
-
   /* gradiente aplicado al borde */
   background-image: linear-gradient(#0d1117, #0d1117),
-                    linear-gradient(90deg, #00ffd5, #8c52ff);
+                    linear-gradient(90deg, #365faa, #365faa);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  padding: 10px;
 }
 
 /*
