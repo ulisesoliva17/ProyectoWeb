@@ -85,17 +85,45 @@ header .lista .link {
   
 }
 
-/*INDEX*/
+/*--------------------INDEX-----------------------------*/
+
+#domi{
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 5rem;  
+}
+
 .body{
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding: 3.5rem;
 }
+
 .body .imgPrin{
   width: 30rem;
 }
-/*FIN INDEX*/
-/*DEEP LEARNING*/
+.parrafos-prin{
+  display: flex;
+  padding: 3.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.parrafos-prin > p{
+  padding: 10rem;
+  font-size: 1.5rem;
+}
+#p1-prin{
+  margin: 2rem;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: bold;      /* más grueso */
+    transform: rotate(-30deg); /* lo inclina 30 grados */
+    text-align: center;
+    color: white;
+}
+/*----------------------FIN INDEX-----------------------*/
+
+/*----------------------DEEP LEARNING-------------------*/
 
 #main-dl {
   margin-left: auto;
