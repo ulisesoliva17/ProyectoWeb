@@ -78,10 +78,24 @@ header .lista .link {
   padding: 15px 13px;
 }
 
+
+
 /*REVEER ESTO PARA QUE NO SE DEFORME*/
-img {
-  width: 200px;
+.conjunto .logo {
+  
 }
+
+/*INDEX*/
+.body{
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+.body .imgPrin{
+  width: 30rem;
+}
+/*FIN INDEX*/
+/*DEEP LEARNING*/
 
 #main-dl {
   margin-left: auto;
@@ -153,6 +167,7 @@ img {
   box-sizing: border-box;
 }
 
+
 #modelos-cajas>article {
   /*border: 1px solid #e5e7eb;*/
   background: #00337a; /* color interno oscuro #00183a */
@@ -166,6 +181,14 @@ img {
   padding: 10px;
 }
 
+
+#modelos-cajas > article> div > span{
+  background-color: #8c52ff;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 3px;
+  margin: 10px;
+}
 /*
 #modelos-caja,h3,p,span,em{
 background: rgba(255, 255, 255, 0.02);
