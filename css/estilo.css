@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -146,7 +146,7 @@ img {
 
 #modelos-cajas>article {
   /*border: 1px solid #e5e7eb;*/
-  background: #0d1117; /* color interno oscuro */
+  background: #00183a; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
   border-radius: 12px;
 
