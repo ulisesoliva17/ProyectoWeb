@@ -2,16 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #37465B;
+  background-color: #212B38;
+  background: linear-gradient(
+    45deg,
+    #0d1117 0%,         /* azul oscuro casi negro en el top */
+    #0f2233 20%,        /* azul profundo */
+    #1b1d3b 55%,        /* transición hacia púrpura */
+    #2a0845 100%        /* violeta/morado profundo abajo */
+  );
+  color: #f0f0f0;
+  color: white;
   background-attachment: fixed;
+  color:white;
 }
+/* #37465B; */
 
 /*Agregado 29/09*/
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #5AFFE7;
 }
 
 /*5AFFE7 verde agua claro*/
@@ -86,15 +96,20 @@ img {
   padding-bottom: 6rem;
   /* 96px */
 }
+#dl-h1{
+  text-align:center;
+}
 
 #descripcion {
   margin-top: 3rem;
-  /* 48px */
-  border-radius: 1.5rem;
-  /* 24px */
-  /*border: 1px solid rgba(244, 225, 225, 0.746);*/
-  background-color: #726eff;
   padding: 1.5rem;
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+  /* gradiente aplicado al borde */
+  background-image: linear-gradient(#0d1117, #0d1117),
+                    linear-gradient(90deg, #00ffd5, #8c52ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   /* 24px */
 }
 
@@ -130,10 +145,16 @@ img {
 }
 
 #modelos-cajas>article {
-  background-color: #08C6AB;
   /*border: 1px solid #e5e7eb;*/
-  border-radius: 0.5rem;
-  padding: 1rem;
+  background: #0d1117; /* color interno oscuro */
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+
+  /* gradiente aplicado al borde */
+  background-image: linear-gradient(#0d1117, #0d1117),
+                    linear-gradient(90deg, #00ffd5, #8c52ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 /*
@@ -148,8 +169,6 @@ background: rgba(255, 255, 255, 0.02);
   /* rounded-3xl */
   border: 1px solid rgba(255, 255, 255, 0.2);
   /* border-white/20 */
-  background: rgba(255, 255, 255, 0.1);
-  /* bg-white/10 */
   padding: 1.5rem;
   /* p-6 */
   backdrop-filter: blur(12px);
