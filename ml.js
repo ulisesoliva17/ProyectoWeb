@@ -13,6 +13,7 @@ function crearCard(titulo, parrafos, contenedorId) { //Definimos la funcion.
     const pTags = clon.querySelectorAll("p"); //Selecciona todos los elementos <p> dentro del clon.
     pTags[0].textContent = parrafos[0] || ""; //primer p
     pTags[1].textContent = parrafos[1] || ""; //segundo p
+    pTags[2].textContent = parrafos[2] || ""; //Tercer p
 
     const contenedor = document.getElementById(contenedorId); //Busca el contenedor en el DOM donde se va a insertar la tarjeta.
                                                              //Usa el id que se pasó como argumento.
@@ -35,7 +36,7 @@ async function cargarCards() {  //Declara una función asíncrona llamada cargar
     try {
     //Usa fetch para pedir el archivo externo cards.json.
     //await espera a que la respuesta llegue antes de continuar. 
-    const respuesta = await fetch("cards.json"); //Lo  tengo que cambiar por el json al final vamos a usar
+    const respuesta = await fetch("ml.json"); //Lo  tengo que cambiar por el json al final vamos a usar
     
     //Convierte la respuesta en formato JSON a un objeto JavaScript.
     //datos será un array de objetos, cada uno representando una tarjeta.
