@@ -1,0 +1,109 @@
+{
+    "_version": 1,
+    "page": {
+      "title": "Deep Learning",
+      "subtitle": "El corazón de la IA moderna",
+      "intro": "El deep learning está en todas partes: desde el reconocimiento facial en tu teléfono hasta los subtítulos automáticos de YouTube o los generadores de imágenes como Stable Diffusion. Se trata de una rama del machine learning que utiliza redes neuronales profundas para aprender de grandes volúmenes de datos y resolver problemas antes imposibles."
+    },
+    "descripcion": {
+      "titulo": "Cómo funciona",
+      "parrafos": [
+        "Las redes neuronales profundas imitan el funcionamiento del cerebro humano. Están formadas por capas de nodos interconectados (neuronas artificiales) que procesan información de manera jerárquica.",
+        "Dato clave: entrenar un modelo es costoso en tiempo y recursos, pero una vez entrenado puede responder en milisegundos."
+      ],
+      "lista": [
+        {
+          "titulo": "Propagación hacia adelante",
+          "texto": "la red genera una predicción."
+        },
+        {
+          "titulo": "Retropropagación",
+          "texto": "ajusta sus parámetros corrigiendo errores."
+        },
+        {
+          "titulo": "Alta demanda computacional",
+          "texto": "suelen entrenarse en GPUs con frameworks como TensorFlow, PyTorch o JAX."
+        }
+      ]
+    },
+    "modelos_principales": [
+      {
+        "tag": "CNN",
+        "chips": ["Visión", "Clasificación", "Detección"],
+        "titulo": "Convolutional Neural Networks",
+        "subtitulo": "Visión artificial",
+        "texto": "Detecta patrones en imágenes. Se usa en reconocimiento facial y vehículos autónomos."
+      },
+      {
+        "tag": "RNN / LSTM / GRU",
+        "chips": ["Secuencias", "Audio", "Texto"],
+        "titulo": "Redes Recurrentes",
+        "subtitulo": "Lenguaje y secuencias",
+        "texto": "Maneja información temporal como texto o audio."
+      },
+      {
+        "tag": "Transformers",
+        "chips": ["PLN", "Codificación", "Traducción"],
+        "titulo": "Mecanismo de Atención",
+        "subtitulo": "Procesamiento de texto",
+        "texto": "Base de modelos como GPT o BERT; procesan en paralelo con attention mechanisms."
+      },
+      {
+        "tag": "VAE",
+        "chips": ["Latentes", "Compresión", "Sampling"],
+        "titulo": "Variational Autoencoders",
+        "subtitulo": "IA generativa",
+        "texto": "Comprimen y generan variaciones de datos; base de GANs y modelos de difusión."
+      },
+      {
+        "tag": "GANs",
+        "chips": ["Generación", "Imagen", "Video"],
+        "titulo": "Generative Adversarial Networks",
+        "subtitulo": "Imágenes realistas",
+        "texto": "Dos redes en competencia: generador vs discriminador."
+      },
+      {
+        "tag": "Difusión",
+        "chips": ["Imagen", "Síntesis", "Creatividad"],
+        "titulo": "Modelos de difusión",
+        "subtitulo": "Imágenes de alta calidad",
+        "texto": "Como Stable Diffusion o Imagen; añaden y eliminan ruido hasta crear resultados fotorrealistas."
+      }
+    ],
+    "casos_de_uso": [
+      { "titulo": "Industria", "texto": "Inspección de productos, mantenimiento predictivo." },
+      { "titulo": "Salud", "texto": "Detección temprana de cáncer en imágenes médicas." },
+      { "titulo": "Atención al cliente", "texto": "Chatbots y asistentes virtuales." },
+      { "titulo": "Finanzas", "texto": "Detección de fraudes y predicción de riesgos." },
+      { "titulo": "Creatividad", "texto": "Arte, música, doblaje automático y videojuegos." },
+      { "titulo": "Medio ambiente", "texto": "Predicción climática y optimización energética." }
+    ],
+    "areas_destacadas": [
+      {
+        "titulo": "Procesamiento del Lenguaje Natural (PLN)",
+        "texto": [
+          "El PLN permite que las máquinas comprendan y produzcan lenguaje humano.",
+          "Ejemplos: traducción automática, análisis de sentimientos, generación de texto y asistentes de voz como Siri o Alexa."
+        ]
+      },
+      {
+        "titulo": "IA Generativa",
+        "texto": [
+          "Quizás la más revolucionaria. Los modelos generativos crean contenido nuevo —texto, imágenes, música o código— a partir de ejemplos previos."
+        ],
+        "aplicaciones": [
+          "Marketing (textos creativos).",
+          "Desarrollo de software (autocompletar código).",
+          "Entretenimiento (música o personajes virtuales)."
+        ]
+      }
+    ],
+    "pros_cons_future": {
+      "ventajas": ["Precisión en tareas complejas", "Escalabilidad", "Automatización"],
+      "desafios": ["Necesidad de datos masivos", "Sesgos", "Alto consumo energético"],
+      "impacto": {
+        "items": ["Oportunidades laborales", "Dilemas éticos (fake news, deepfakes, privacidad)"],
+        "closing": "El futuro del deep learning no está solo en hacerlo más potente, sino también en hacerlo más transparente, eficiente y responsable."
+      }
+    }
+  }
