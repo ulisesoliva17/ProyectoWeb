@@ -285,3 +285,28 @@ background: rgba(255, 255, 255, 0.02);
   padding: 1.25rem;
   /* p-5 */
 }
+
+/*CNN*/
+#selection-cnn{
+  
+}
+#modelos-cajas-cnn{
+    background-image: linear-gradient(45deg,
+    #0d1117 0%,         /* azul oscuro casi negro en el top */
+    #0f2233 20%,        /* azul profundo */
+    #1b1d3b 55%,        /* transición hacia púrpura */
+    #2a0845 100%        /* violeta/morado profundo abajo */),
+                    linear-gradient(220deg, #00ffd5, #8c52ff);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+#modelos-h2-cnn {
+  color: #08C6AB;
+}
+/*------------------------------------------------------------------------------*/
