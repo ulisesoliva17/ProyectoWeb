@@ -2,66 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="description" content="Aprendiendo IA">
-    <meta name="keywords" content="Inteligencia, open-ia, learning, machine, deeplearning">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>FAI-AI</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Aprendiendo IA">
+  <meta name="keywords" content="Inteligencia, open-ia, learning, machine, deeplearning">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>FAI-AI</title>
 </head>
 
 <body>
-    <!--------------------------------------HEADER PROPIA DE LA WEB------------------------------------------------------------>
-    <header>
-        <div class="conjunto">
-            <div class="logo">
-                    <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
-            </div>
-            <div class="titulo">
-                <h1> <a href="../index.html">N-AI</a> </h1>
-            </div>
-        </div>
-        <nav>
-            <ul class="lista">
-                <li><a class="link link--1" href="../index.html">Principal</a></li>
-                <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
-                <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
-            </ul>
-        </nav>
-    </header>
-<!----------------------------------------------CUERPO DEL INDEX---------------------------------------------------------------->
-<main id="main-dl">
+  <!--------------------------------------HEADER PROPIA DE LA WEB------------------------------------------------------------>
+  <header>
+    <div class="conjunto">
+      <div class="logo">
+        <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+      </div>
+      <div class="titulo">
+        <h1> <a href="../index.html">N-AI</a> </h1>
+      </div>
+    </div>
+    <nav>
+      <ul class="lista">
+        <li><a class="link link--1" href="../index.html">Principal</a></li>
+        <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+        <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!----------------------------------------------CUERPO DEL INDEX---------------------------------------------------------------->
+  <main id="main-dl">
     <!-- Hero -->
     <h1 id="dl-h1">Deep Learning
       <span>El corazón de la IA moderna</span>
     </h1>
     <p>
-      El deep learning está en todas partes: desde el reconocimiento facial en tu teléfono hasta los subtítulos automáticos de YouTube o los generadores de imágenes como Stable Diffusion. Se trata de una rama del <em>machine learning</em> que utiliza redes neuronales profundas para aprender de grandes volúmenes de datos y resolver problemas antes imposibles.
+      El deep learning está en todas partes: desde el reconocimiento facial en tu teléfono hasta los subtítulos
+      automáticos de YouTube o los generadores de imágenes como Stable Diffusion. Se trata de una rama del <em>machine
+        learning</em> que utiliza redes neuronales profundas para aprender de grandes volúmenes de datos y resolver
+      problemas antes imposibles.
     </p>
 
     <!-- Cómo funciona -->
     <section id="descripcion">
       <h2 id="descripcion-h2">Cómo funciona</h2>
       <p>
-        Las redes neuronales profundas imitan el funcionamiento del cerebro humano. Están formadas por capas de nodos interconectados (neuronas artificiales) que procesan información de manera jerárquica.
+        Las redes neuronales profundas imitan el funcionamiento del cerebro humano. Están formadas por capas de nodos
+        interconectados (neuronas artificiales) que procesan información de manera jerárquica.
       </p>
       <ul id="descripcion-lista">
         <li><strong>Propagación hacia adelante:</strong> la red genera una predicción.</li>
         <li><strong>Retropropagación:</strong> ajusta sus parámetros corrigiendo errores.</li>
-        <li><strong>Alta demanda computacional:</strong> suelen entrenarse en GPUs con frameworks como TensorFlow, PyTorch o JAX.</li>
+        <li><strong>Alta demanda computacional:</strong> suelen entrenarse en GPUs con frameworks como TensorFlow,
+          PyTorch o JAX.</li>
       </ul>
-      <p> <strong>Dato clave:</strong> entrenar un modelo es costoso en tiempo y recursos, pero una vez entrenado puede responder en milisegundos.</p>
+      <p> <strong>Dato clave:</strong> entrenar un modelo es costoso en tiempo y recursos, pero una vez entrenado puede
+        responder en milisegundos.</p>
     </section>
 
     <!-- Modelos principales -->
     <section id="modelos">
       <h2 id="modelos-h2"> Modelos principales</h2>
-      <div class="modelos-cajas">
-        <!-- CNN -->
+      <div class="modelos-cajas" id="contenedorModeloPrincipal">
+
+        <template id="modelosPrincipalesDP">
+          <article>
+            <div>
+              <span><a href=""></a></span>
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+          </article>
+        </template>
+
+
+        <!--
+     
         <article>
           <div>
             <span> <a href="../dl-CNN.html">CNN</a> </span>
@@ -75,7 +100,7 @@
           <p>Visión artificial</p>
           <p>Detecta patrones en imágenes. Se usa en reconocimiento facial y vehículos autónomos.</p>
         </article>
-        <!-- RNN/LSTM/GRU -->
+      
         <article>
           <div>
             <span><a href="../RNN-LSTM-GRU.html"> RNN / LSTM / GRU</a> </span>
@@ -89,7 +114,7 @@
           <p>Lenguaje y secuencias</p>
           <p>Maneja información temporal como texto o audio.</p>
         </article>
-        <!-- Transformers -->
+
         <article>
           <div>
             <span> <a href="../transformers.html">Transformers</a></span>
@@ -103,7 +128,7 @@
           <p>Procesamiento de texto</p>
           <p>Base de modelos como GPT o BERT; procesan en paralelo con <em>attention mechanisms</em>.</p>
         </article>
-        <!-- VAE -->
+
         <article>
           <div>
             <span><a href="../vae.html">VAE</a></span>
@@ -117,7 +142,7 @@
           <p>IA generativa</p>
           <p>Comprimen y generan variaciones de datos; base de GANs y modelos de difusión.</p>
         </article>
-        <!-- GANs -->
+
         <article>
           <div>
             <span> <a href="../gans.html">GANs</a></span>
@@ -131,7 +156,7 @@
           <p>Imágenes realistas</p>
           <p>Dos redes en competencia: generador vs discriminador.</p>
         </article>
-        <!-- Difusión -->
+
         <article>
           <div>
             <span><a href="../difusion.html">Difusión</a></span>
@@ -145,6 +170,7 @@
           <p>Imágenes de alta calidad</p>
           <p>Como Stable Diffusion o Imagen; añaden y eliminan ruido hasta crear resultados fotorrealistas.</p>
         </article>
+      -->
       </div>
     </section>
 
@@ -182,15 +208,17 @@
     <!-- Áreas destacadas -->
     <section id="areas">
       <h2 id="areas-h2">Áreas destacadas</h2>
-      <div id = "areas-grid">
-        <div id = "area-card">
+      <div id="areas-grid">
+        <div id="area-card">
           <h3>Procesamiento del Lenguaje Natural (PLN)</h3>
           <p>El PLN permite que las máquinas comprendan y produzcan lenguaje humano.</p>
-          <p><strong>Ejemplos:</strong> traducción automática, análisis de sentimientos, generación de texto y asistentes de voz como Siri o Alexa.</p>
+          <p><strong>Ejemplos:</strong> traducción automática, análisis de sentimientos, generación de texto y
+            asistentes de voz como Siri o Alexa.</p>
         </div>
-        <div id ="area-card">
+        <div id="area-card">
           <h3>IA Generativa</h3>
-          <p>Quizás la más revolucionaria. Los modelos generativos crean contenido nuevo —texto, imágenes, música o código— a partir de ejemplos previos.</p>
+          <p>Quizás la más revolucionaria. Los modelos generativos crean contenido nuevo —texto, imágenes, música o
+            código— a partir de ejemplos previos.</p>
           <div>
             <strong>Aplicaciones:</strong>
             <ul>
@@ -208,7 +236,7 @@
     <section id="areas">
       <h2 id="ventajas">Ventajas, desafíos y futuro</h2>
       <div class="VD-Grid">
-        <div id = "area-card">
+        <div id="area-card">
           <h3>Ventajas</h3>
           <ul>
             <li>Precisión en tareas complejas</li>
@@ -216,7 +244,7 @@
             <li>Automatización</li>
           </ul>
         </div>
-        <div id = "area-card">
+        <div id="area-card">
           <h3>Desafíos</h3>
           <ul>
             <li>Necesidad de datos masivos</li>
@@ -224,13 +252,14 @@
             <li>Alto consumo energético</li>
           </ul>
         </div>
-        <div id = "area-card">
+        <div id="area-card">
           <h3>Impacto social</h3>
           <ul>
             <li>Oportunidades laborales</li>
             <li>Dilemas éticos (fake news, deepfakes, privacidad)</li>
           </ul>
-          <p>El futuro del deep learning no está solo en hacerlo más potente, sino también en hacerlo más transparente, eficiente y responsable.</p>
+          <p>El futuro del deep learning no está solo en hacerlo más potente, sino también en hacerlo más transparente,
+            eficiente y responsable.</p>
         </div>
       </div>
     </section>
@@ -249,4 +278,6 @@
       </div>
     </section>-->
   </main>
+    <script src="../dl.js"></script>
 </body>
+</html>
