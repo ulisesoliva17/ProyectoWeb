@@ -178,7 +178,7 @@ header .lista .link {
   color: #08C6AB;
 }
 
-#modelos-cajas {
+.modelos-cajas{
   border: 2px solid transparent;
   background-image: linear-gradient(45deg,
     #0d1117 0%,         /* azul oscuro casi negro en el top */
@@ -200,7 +200,7 @@ header .lista .link {
 }
 
 
-#modelos-cajas>article {
+.modelos-cajas>article {
   /*border: 1px solid #e5e7eb;*/
   background: #00337a; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
@@ -214,7 +214,7 @@ header .lista .link {
 }
 
 
-#modelos-cajas > article> div > span{
+.modelos-cajas > article> div > span{
   background-color: #8c52ff;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -222,7 +222,7 @@ header .lista .link {
   margin: 10px;
 }
 
-#modelos-cajas > article > div > div{
+.modelos-cajas > article > div > div{
   padding-top: 10px;
 }
 /*
@@ -264,7 +264,7 @@ background: rgba(255, 255, 255, 0.02);
   /*Fondo tranparente*/
 }
 
-#VD-Grid {
+.VD-Grid {
   margin-top: 1.5rem;
   /* mt-6 */
   display: grid;
@@ -290,7 +290,7 @@ background: rgba(255, 255, 255, 0.02);
 #selection-cnn{
   
 }
-#modelos-cajas-cnn{
+.modelos-cajas-cnn{
     background-image: linear-gradient(45deg,
     #0d1117 0%,         /* azul oscuro casi negro en el top */
     #0f2233 20%,        /* azul profundo */

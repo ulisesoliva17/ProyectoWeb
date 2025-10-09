@@ -1,120 +1,84 @@
 {
-    "_version": 1,
-    "page": {
-      "title": "Machine Learning",
-      "subtitle": "La rama práctica de la inteligencia artificial",
-      "intro": "El machine learning es una rama de la inteligencia artificial (IA) centrada en entrenar computadoras y máquinas para imitar el modo en que aprenden los humanos, realizar tareas de forma autónoma y mejorar su rendimiento y precisión a través de la experiencia y la exposición a más datos."
-    },
-    "tipos_aprendizaje": {
-      "titulo": "Tipos de aprendizaje",
-      "items": [
-        {
-          "titulo": "Aprendizaje Supervisado",
-          "parrafos": [
-            "El aprendizaje supervisado, también conocido como machine learning supervisado, se define por el uso de conjuntos de datos etiquetados para entrenar algoritmos para clasificar datos o predecir resultados con precisión.",
-            "A medida que los datos de entrada se introducen en el modelo, este ajusta sus pesos hasta que se ajustan adecuadamente. Esto ocurre como parte del proceso de validación cruzada para garantizar que el modelo evite el sobreajuste o el subajuste.",
-            "El aprendizaje supervisado ayuda a resolver problemas del mundo real a escala —por ejemplo, clasificar el spam— y emplea métodos como redes neuronales, Naïve Bayes, regresión lineal, regresión logística, bosque aleatorio y máquinas de vectores de soporte (SVM)."
-          ]
-        },
-        {
-          "titulo": "Aprendizaje No Supervisado",
-          "parrafos": [
-            "El aprendizaje no supervisado utiliza algoritmos de machine learning para analizar y agrupar conjuntos de datos sin etiquetar (clústeres). Estos algoritmos descubren patrones ocultos o agrupaciones sin intervención humana.",
-            "Es ideal para análisis exploratorio de datos, segmentación de clientes, estrategias de venta cruzada, reconocimiento de imágenes y reducción de dimensionalidad."
-          ]
-        },
-        {
-          "titulo": "Aprendizaje por Refuerzo",
-          "parrafos": [
-            "El aprendizaje por refuerzo es similar al supervisado en su objetivo de optimizar decisiones, pero no se entrena con ejemplos etiquetados. El agente aprende mediante prueba y error, recibiendo recompensas por acciones exitosas y buscando maximizar una política a lo largo del tiempo.",
-            "Se aplica en juegos, control robótico, sistemas de recomendación que optimizan secuencias de decisiones y problemas donde la retroalimentación viene en forma de recompensa diferida."
-          ]
-        }
+  "items": [
+    {
+      "titulo": "Aprendizaje Supervisado",
+      "parrafos": [
+        "El aprendizaje supervisado, también conocido como machine learning supervisado, se define por el uso de conjuntos de datos etiquetados para entrenar algoritmos para clasificar datos o predecir resultados con precisión.",
+        "A medida que los datos de entrada se introducen en el modelo, este ajusta sus pesos hasta que se ajustan adecuadamente. Esto ocurre como parte del proceso de validación cruzada para garantizar que el modelo evite el sobreajuste o el subajuste.",
+        "El aprendizaje supervisado ayuda a resolver problemas del mundo real a escala —por ejemplo, clasificar el spam— y emplea métodos como redes neuronales, Naïve Bayes, regresión lineal, regresión logística, bosque aleatorio y máquinas de vectores de soporte (SVM)."
       ]
     },
-    "casos_de_uso": {
-      "titulo": "Casos de uso de machine learning en el mundo real",
-      "items": [
-        {
-          "titulo": "Reconocimiento de voz",
-          "texto": "También llamado reconocimiento automático de voz (ASR). Utiliza procesamiento de lenguaje natural (PLN) para convertir habla en texto. Está presente en asistentes y búsquedas por voz (por ejemplo, Siri)."
-        },
-        {
-          "titulo": "Atención al cliente",
-          "texto": "Chatbots y agentes virtuales automatizan respuestas frecuentes, ofrecen asesoramiento, sugerencias y realizan venta cruzada en plataformas de e-commerce y redes sociales."
-        },
-        {
-          "titulo": "Visión artificial",
-          "texto": "Permite extraer información de imágenes y vídeo. Aplicaciones: etiquetado de fotos, imágenes radiológicas en salud y vehículos autónomos."
-        },
-        {
-          "titulo": "Motores de recomendación",
-          "texto": "Usan datos de comportamiento para sugerir productos relevantes y mejorar conversiones en minoristas online."
-        },
-        {
-          "titulo": "Automatización Robótica de Procesos (RPA)",
-          "texto": "Robótica de software que automatiza tareas manuales y repetitivas combinando reglas y ML para decisiones más inteligentes."
-        },
-        {
-          "titulo": "Negociación de acciones automatizada",
-          "texto": "Plataformas de trading de alta frecuencia y optimización de carteras que ejecutan operaciones sin intervención humana."
-        },
-        {
-          "titulo": "Detección de fraudes",
-          "texto": "Los bancos entrenan modelos supervisados con transacciones fraudulentas conocidas; la detección de anomalías identifica operaciones atípicas para investigar."
-        }
+    {
+      "titulo": "Aprendizaje No Supervisado",
+      "parrafos": [
+        "El aprendizaje no supervisado utiliza algoritmos de machine learning para analizar y agrupar conjuntos de datos sin etiquetar (clústeres). Estos algoritmos descubren patrones ocultos o agrupaciones sin intervención humana.",
+        "Es ideal para análisis exploratorio de datos, segmentación de clientes, estrategias de venta cruzada, reconocimiento de imágenes y reducción de dimensionalidad."
       ]
     },
-    "algoritmos": {
-      "titulo": "Algoritmos más comunes de machine learning",
-      "items": [
-        {
-          "titulo": "Redes neuronales",
-          "texto": "Simulan el funcionamiento del cerebro con nodos interconectados. Son excelentes para reconocer patrones y se usan en traducción, reconocimiento de imágenes, voz y generación de contenido."
-        },
-        {
-          "titulo": "Regresión lineal",
-          "texto": "Se emplea para predecir valores numéricos basados en relaciones lineales entre variables (ej.: predicción de precios de viviendas)."
-        },
-        {
-          "titulo": "Regresión logística",
-          "texto": "Algoritmo supervisado para predecir variables categóricas (sí/no). Usado en clasificación de spam, control de calidad, entre otros."
-        },
-        {
-          "titulo": "Agrupación en clústeres",
-          "texto": "Algoritmos no supervisados que identifican agrupaciones y diferencias en datos sin etiquetas, útiles en segmentación de clientes y análisis exploratorio."
-        },
-        {
-          "titulo": "Árboles de decisión",
-          "texto": "Modelos interpretables que representan decisiones en forma de árbol. Pueden usarse para clasificación y regresión; fáciles de validar y auditar."
-        },
-        {
-          "titulo": "Bosques aleatorios",
-          "texto": "Conjuntos de árboles de decisión que combinan múltiples predictores para mejorar la robustez y reducir el sobreajuste."
-        }
+    {
+      "titulo": "Aprendizaje por Refuerzo",
+      "parrafos": [
+        "El aprendizaje por refuerzo es similar al supervisado en su objetivo de optimizar decisiones, pero no se entrena con ejemplos etiquetados. El agente aprende mediante prueba y error, recibiendo recompensas por acciones exitosas y buscando maximizar una política a lo largo del tiempo.",
+        "Se aplica en juegos, control robótico, sistemas de recomendación que optimizan secuencias de decisiones y problemas donde la retroalimentación viene en forma de recompensa diferida."
       ]
+    }
+  ],
+
+  "items2":[
+    {
+      "titulo":"Reconocimiento de voz",
+      "parrafo":"También llamado reconocimiento automático de voz (ASR). Utiliza procesamiento de lenguaje natural (PLN) para convertir habla en texto. Está presente en asistentes y búsquedas por voz (por ejemplo, Siri)."
+    }, 
+    {
+      "titulo":"Atención al cliente",
+      "parrafo":"Chatbots y agentes virtuales automatizan respuestas frecuentes, ofrecen asesoramiento, sugerencias y realizan venta cruzada en plataformas de e-commerce y redes sociales."
     },
-    "pros_cons_future": {
-      "titulo": "Ventajas, desafíos e impacto",
-      "ventajas": [
+    {
+      "titulo": "Visión artificial",
+      "parrafo": " Permite extraer información de imágenes y vídeo. Aplicaciones: etiquetado de fotos, imágenes radiológicas en salud y vehículos autónomos."
+    },
+    {
+      "titulo": "Motores de recomendación",
+      "parrafo": "Usan datos de comportamiento para sugerir productos relevantes y mejorar conversiones en minoristas online."
+    },
+    {
+      "titulo": "Automatización Robótica de Procesos (RPA)",
+      "parrafo": "Robótica de software que automatiza tareas manuales y repetitivas combinando reglas y ML para decisiones más inteligentes."
+    },
+    {
+      "titulo":"Negociación de acciones automatizada",
+      "parrafo": "Plataformas de trading de alta frecuencia y optimización de carteras que ejecutan operaciones sin intervención humana."
+    },
+    {
+      "titulo":"Detección de fraudes",
+      "parrafo":" Los bancos entrenan modelos supervisados con transacciones fraudulentas conocidas; la detección de anomalías identifica operaciones atípicas para investigar."
+    }
+  ],
+
+  "items3":[
+    {
+      "titulo": "Ventajas",
+      "lista": [
         "Precisión en tareas complejas",
         "Escalabilidad",
         "Automatización de procesos"
-      ],
-      "desafios": [
+      ]
+    },
+    {
+      "titulo": "Desafíos",
+      "lista": [
         "Necesidad de datos masivos",
         "Sesgos en los datos y modelos",
         "Alto consumo energético"
-      ],
-      "impacto": {
-        "items": [
-          "Oportunidades y transformación laboral",
-          "Dilemas éticos: privacidad, deepfakes y desinformación"
-        ],
-        "closing": "El reto es hacer que el machine learning sea más transparente, eficiente y responsable."
-      }
+      ]
     },
-    "footer": {
-      "texto": ""
+    {
+       "titulo": "Impacto social",
+      "lista": [
+        "Oportunidades y transformación laboral",
+        "Dilemas éticos: privacidad, deepfakes y desinformación",
+        "El reto es hacer que el machine learning sea más transparente, eficiente y responsable"
+      ]
     }
-  }
+  ] 
+}

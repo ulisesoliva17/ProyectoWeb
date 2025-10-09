@@ -48,21 +48,22 @@
       mejorar su rendimiento y precisión a través de la experiencia y la exposición a más datos.
     </p>
 
-    <!-- Tipos -->
+    <!-- Tipos -->     <!--Tiene hecho el temple, funcionando-->
     <section id="modelo">
       <h2 id="modelo-h2">Tipos de aprendizaje</h2>
-      <div id="modelos-cajas">
+      <div class="modelos-cajas" id="tiposDeAprendizage">
         <!--Inicio Plantilla Generica-->
-        <!--<template id="plantilla-card">
+        <template id="plantilla-card">
           <article class="card">
             <h3></h3>
             <p></p>
             <p></p>
-            <p</p>
+            <p></p>
           </article>
-        </template>-->
+        </template>
         <!--Fin Plantilla Generica-->
-        
+      
+        <!--
         <article class="card">
           <h3>Aprendizaje Supervisado</h3>
           <p>
@@ -106,18 +107,27 @@
             Se aplica en juegos, control robótico, sistemas de recomendación que optimizan secuencias de decisiones y
             problemas donde la retroalimentación viene en forma de recompensa diferida.
           </p>
-        </article>
+        </article>-->
+      
       </div>
     </section>
 
     <!-- Separador -->
     <hr />
 
-    <!-- Casos de uso -->
+    <!-- Casos de uso -->  <!--Tiene hecho el temple, funcionando-->
     <section id="modelos">
       <h2 id="modelos-h2">Casos de uso de machine learning en el mundo real</h2>
 
-      <div id="modelos-cajas"> <!-- div class="grid-casos" -->
+      <div class="modelos-cajas" id="casosDeUso"> <!-- div class="grid-casos" -->
+                   <template id="plantilla2">
+            <div class="caso">
+              <h3></h3>
+              <p></p>
+            </div>
+          </template>
+        
+          <!--
         <div class="caso">
           <h3>Reconocimiento de voz</h3>
           <p>
@@ -171,14 +181,15 @@
             Los bancos entrenan modelos supervisados con transacciones fraudulentas conocidas; la detección de anomalías
             identifica operaciones atípicas para investigar.
           </p>
-        </div>
+        </div>-->
       </div>
     </section>
 
-    <!-- Algoritmos -->
+    <!-- Algoritmos --> <!--Ver como reutilizo el temple de casos de uso, ya que es lo 
+                            mismo pero con una caja menos -->
     <section id="modelos">
       <h2 id="modelos-h2">Algoritmos más comunes de machine learning</h2>
-      <div id="modelos-cajas">
+      <div class="modelos-cajas">
         <!--
       <p>Existen numerosos algoritmos empleados habitualmente:</p>
       <ul>
@@ -252,10 +263,24 @@
       <!--</article>-->
     </section>
 
-    <!-- Ventajas y desafíos -->
+
+    <!-- Ventajas y desafíos -->  <!--Tiene hecho el temple, esta funcionando-->
     <section id="section-areas">
       <h2 id="ventajas">Ventajas, desafíos e impacto</h2>
-      <div id="VD-Grid">
+      <div class="VD-Grid" id="VentDes">
+
+        <template id="plantilla3">
+          <div id="area-card">
+          <h3></h3>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </template>
+
+        <!--
         <div id="area-card">
           <h3>Ventajas</h3>
           <ul>
@@ -281,7 +306,7 @@
             <li>Dilemas éticos: privacidad, deepfakes y desinformación</li>
           </ul>
           <p>El reto es hacer que el machine learning sea más transparente, eficiente y responsable.</p>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -292,6 +317,7 @@
       </p>
     </footer>
   </main>
+  <script src="../ml.js"></script>
 </body>
 
 </html>
