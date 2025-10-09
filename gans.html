@@ -38,17 +38,50 @@
             <h2 id="modelos-h2-cnn">CNN</h2>
             <div id="modelos-cajas-cnn">
                 <p>
-                    p1
+                    Las redes generativas antagónicas (GAN) son redes neuronales que se utilizan
+                    tanto dentro como fuera de la inteligencia artificial (IA) para crear nuevos
+                    datos que se parezcan a los datos de entrenamiento originales. Pueden incluir
+                    imágenes que parezcan rostros humanos, pero son generadas, no tomadas de personas
+                    reales. La parte "antagónica" del nombre proviene del vaivén entre las dos partes
+                    del GAN: un generador y un discriminador.
+                </p>
+                <ul>
+                    <li>
+                        El generador crea algo: imágenes, vídeo o audio y, a continuación,
+                        produce una salida con un toque diferente. Por ejemplo, un caballo puede
+                        transformarse en una cebra con cierto grado de precisión. El resultado depende
+                        de la entrada y de lo bien entrenadas que estén las capas en el modelo
+                        generativo para este caso de uso.
+                    </li>
+                    <li>
+                        El discriminador es el adversario, en el que el resultado generativo
+                        (imagen falsa) se compara con las imágenes reales del conjunto de datos.
+                        El discriminador trata de distinguir entre las imágenes, el vídeo o el audio
+                        reales y falsos.
+                    </li>
+                </ul>
+                <p>
+                    Las GAN se entrenan solas. El generador crea falsificaciones mientras
+                    el discriminador aprende a detectar las diferencias entre las falsificaciones
+                    del generador y los ejemplos reales. Cuando el discriminador es capaz de marcar
+                    la falsificación, se penaliza al generador. El bucle de retroalimentación continúa
+                    hasta que el generador logra producir una salida que el discriminador no
+                    puede distinguir.
                 </p>
                 <p>
-                    p2
+                    La principal ventaja de las GAN es la creación de resultados realistas que
+                    pueden ser difíciles de distinguir de los originales, lo que a su vez puede
+                    utilizarse para entrenar más modelos de machine learning. Configurar un GAN
+                    para que aprenda es sencillo, ya que se entrenan utilizando datos sin etiquetar
+                    o con un etiquetado menor. Sin embargo, la desventaja potencial es que el
+                    generador y el discriminador podrían ir y venir compitiendo durante mucho
+                    tiempo, creando un gran drenaje del sistema. Una limitación del entrenamiento
+                    es que puede ser necesaria una enorme cantidad de datos de entrada para obtener
+                    un resultado satisfactorio. Otro problema potencial es el "colapso de modo",
+                    cuando el generador produce un conjunto limitado de salidas en lugar de
+                    una variedad más amplia.
                 </p>
-                <p>
-                    p3
-                </p>
-                <p>
-                    P4
-                </p>
+             
             </div>
         </selection>
     </main>
