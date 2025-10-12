@@ -19,7 +19,6 @@ body {
 
 /*Agregado 29/09*/
 header {
-  background: radial-gradient(circle at center, #00ffd5, #8c52ff);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,27 +38,25 @@ header .conjunto .logo {
 }
 
 header .conjunto .logo img {
-  width: 50px;
+  width: 70px;
 }
 
 header .conjunto .titulo h1 {
-  font-family: 'Bebas Neue', cursive;
   letter-spacing: 1px;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1.3rem;
 }
 
 header .conjunto .titulo h1 a {
-  padding-left: 10px;
+  padding-left: 5px;
   text-decoration: none;
   list-style: none;
   color: #000;
 }
 
-header .conjunto .titulo h1 a #title {
-  font-family: 'Bebas Neue', cursive;
-}
 
 header .conjunto .titulo h1 a:visited {
-  color: #000;
+  color: white;
 }
 
 header .lista {
@@ -72,18 +69,14 @@ header .lista {
 }
 
 header .lista .link {
-  color: #000;
+  color: white;
   text-decoration: none;
   display: flex;
   padding: 15px 13px;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1rem;
 }
 
-
-
-/*REVEER ESTO PARA QUE NO SE DEFORME*/
-.conjunto .logo {
-  
-}
 
 /*--------------------INDEX-----------------------------*/
 
@@ -112,14 +105,15 @@ header .lista .link {
   padding: 10rem;
   font-size: 1.5rem;
 }
-#p1-prin{
+#p1-prin {
   margin: 2rem;
-    font-size: 8rem;
-    font-style: normal;
-    font-weight: bold;      /* más grueso */
-    transform: rotate(-30deg); /* lo inclina 30 grados */
-    text-align: center;
-    color: white;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: bold; /* más grueso */
+  transform: rotate(-30deg); /* lo inclina 30 grados */
+  text-align: center;
+  color: white;
+  font-family: "BBH Sans Bartle", sans-serif;
 }
 /*----------------------FIN INDEX-----------------------*/
 
