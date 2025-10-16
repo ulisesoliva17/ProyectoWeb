@@ -23,7 +23,6 @@
       "titulo": "Mecanismo de Atención",
       "subtitulo": "Procesamiento de texto",
       "descripcion": "Base de modelos como GPT o BERT; procesan en paralelo con <em>attention mechanisms</em>."
-      
     },
     {
       "nombre": "VAE",

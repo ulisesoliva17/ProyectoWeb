@@ -36,7 +36,7 @@ function crearCardCNN(item, contenedorId) {
 async function cargarCardsCNN() {
   try {
     // Carga el JSON
-    const respuesta = await fetch("../jsons/dl.json"); // ajustá la ruta si hace falta
+    const respuesta = await fetch("../jsons/dl.json");
     const datos = await respuesta.json();
 
     // Recorre los items dentro del JSON y crea las cards
