@@ -2,7 +2,7 @@
 "items": [
     {
       "nombre": "CNN",
-      "link": "../dl-CNN.html",
+      "link": "../html/dl-CNN.html",
       "tags": ["Visión", "Clasificación", "Detección"],
       "titulo": "Convolutional Neural Networks",
       "subtitulo": "Visión artificial",
@@ -10,7 +10,7 @@
     },
     {
       "nombre": "RNN/LSTM/GRU",
-      "link": "../RNN-LSTM-GRU.html",
+      "link": "../html/RNN-LSTM-GRU.html",
       "tags": ["Secuencias", "Texto", "Audio"],
       "titulo": "Redes Recurrentes",
       "subtitulo": "Lenguaje y secuencias",
@@ -18,7 +18,7 @@
     },
     {
       "nombre": "Transformers",
-      "link": "../transformers.html",
+      "link": "../html/transformers.html",
       "tags": ["PLN", "Codificación", "Traducción"],
       "titulo": "Mecanismo de Atención",
       "subtitulo": "Procesamiento de texto",
@@ -27,7 +27,7 @@
     },
     {
       "nombre": "VAE",
-      "link": "../vae.html",
+      "link": "../html/vae.html",
       "tags": ["Latentes", "Compresión", "Sampling"],
       "titulo": "Variational Autoencoders",
       "subtitulo": "IA generativa",
@@ -35,7 +35,7 @@
     },
     {
       "nombre": "GANs",
-      "link": "../gans.html",
+      "link": "../html/gans.html",
       "tags": ["Generación", "Imagen", "Video"],
       "titulo": "Generative Adversarial Networks",
       "subtitulo": "Imágenes realistas",
@@ -43,7 +43,7 @@
     },
     {
       "nombre": "Difusión",
-      "link": "../difusion.html",
+      "link": "../html/difusion.html",
       "tags": ["Imagen", "Síntesis", "Creatividad"],
       "titulo": "Modelos de difusión",
       "subtitulo": "Imágenes de alta calidad<",
