@@ -59,7 +59,7 @@ function revealOnScrollAnimate() {
 
     if (elTop < ventanaAltura - 100 && !el.classList.contains("revelado")) {
       setTimeout(() => {
-        //el.style.opacity = 1;
+        el.style.opacity = 1;
         el.classList.add("animate__animated");
         //A medida que voy bajando por el scroll 
         if (el.classList.contains("area-card")) {
@@ -70,7 +70,7 @@ function revealOnScrollAnimate() {
         } else if (el.id === "descripcion-h2" || el.id == "Ind") {
           el.classList.add("animate__heartBeat");
         }else if(el.classList.contains("modelos-cajas")){
-         el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.classList.add("animate__fadeInLeft");
         } else {
           el.classList.add("animate__fadeInUp"); //hace que aparezcan de abajo. 
         }
