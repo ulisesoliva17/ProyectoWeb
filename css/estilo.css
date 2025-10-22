@@ -304,3 +304,11 @@ background: rgba(255, 255, 255, 0.02);
   color: #08C6AB;
 }
 /*------------------------------------------------------------------------------*/
+/*Lo agrego para que a la hora de hacer scrool no me pareza primero y despues me haga el efecto
+sino para que me haga el efecto de una*/
+.modelos-cajas,
+.modelos-cajas > article,
+#area-card {
+  opacity: 0;              /* Oculto al inicio */
+  transition: opacity 0.3s ease;  
+}

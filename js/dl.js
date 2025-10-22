@@ -51,7 +51,7 @@ async function cargarCardsCNN() {
 // Espera a que el DOM esté cargado
 document.addEventListener("DOMContentLoaded", cargarCardsCNN);*/
 function revealOnScrollAnimate() {
-  const elementos = document.querySelectorAll("#Ind,#area-card, .modelos-cajas > article, #ventajas, #modelos-h2, #descripcion-h2, #areas-h2");
+  const elementos = document.querySelectorAll(".modelos-cajas, #Ind,#area-card, .modelos-cajas > article, #ventajas, #modelos-h2, #descripcion-h2, #areas-h2");
   const ventanaAltura = window.innerHeight;
 
   elementos.forEach((el, index) => {
@@ -59,22 +59,24 @@ function revealOnScrollAnimate() {
 
     if (elTop < ventanaAltura - 100 && !el.classList.contains("revelado")) {
       setTimeout(() => {
-        el.style.opacity = 1;
+        //el.style.opacity = 1;
         el.classList.add("animate__animated");
         //A medida que voy bajando por el scroll 
         if (el.classList.contains("area-card")) {
-          //el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.classList.add("animate__animated", "animate__fadeInLeft");
           el.classList.add("animate__zoomOutUp");
         } else if (el.id === "ventajas" || el.id === "modelos-h2" || el.id === "areas-h2") {
           el.classList.add("animate__fadeInLeft");
         } else if (el.id === "descripcion-h2" || el.id == "Ind") {
           el.classList.add("animate__heartBeat");
+        }else if(el.classList.contains("modelos-cajas")){
+         el.classList.add("animate__animated", "animate__fadeInLeft");
         } else {
-          el.classList.add("animate__fadeInUp");
+          el.classList.add("animate__fadeInUp"); //hace que aparezcan de abajo. 
         }
 
         el.classList.add("revelado");
-      }, index * 1);
+      }, index * 20);
     }
 
   });
