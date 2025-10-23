@@ -280,10 +280,7 @@ background: rgba(255, 255, 255, 0.02);
   /* p-5 */
 }
 
-/*CNN*/
-#selection-cnn{
-  
-}
+
 .modelos-cajas-cnn{
     background-image: linear-gradient(45deg,
     #0d1117 0%,         /* azul oscuro casi negro en el top */
@@ -303,6 +300,70 @@ background: rgba(255, 255, 255, 0.02);
 #modelos-h2-cnn {
   color: #08C6AB;
 }
+
+
+
+/*----------------------------------------------------------------------*/
+.modelos-cajasml{
+  border: 2px solid transparent;
+  background-image: linear-gradient(45deg,
+    #0d1117 0%,         /* azul oscuro casi negro en el top */
+    #0f2233 20%,        /* azul profundo */
+    #1b1d3b 55%,        /* transición hacia púrpura */
+    #2a0845 100%        /* violeta/morado profundo abajo */),
+                    linear-gradient(220deg, #00ffd5, #8c52ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  /*Hueco entre filas y columnas*/
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+
+.modelos-cajasml>article {
+  /*border: 1px solid #e5e7eb;*/
+  background: #00337a; /* color interno oscuro #00183a */
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+  /* gradiente aplicado al borde */
+  background-image: linear-gradient(#0d1117, #0d1117),
+                    linear-gradient(90deg, #365faa, #365faa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 10px;
+}
+
+
+.modelos-cajasml > article> div > span{
+  background-color: #8c52ff;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 3px;
+  margin: 10px;
+}
+
+.modelos-cajasml > article > div > div{
+  padding-top: 10px;
+}
+#area-cardml {
+  border-radius: 1rem;
+  /* rounded-2xl */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  /* p-5 */
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
 /*------------------------------------------------------------------------------*/
 /*Lo agrego para que a la hora de hacer scrool no me pareza primero y despues me haga el efecto
 sino para que me haga el efecto de una*/
