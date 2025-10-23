@@ -115,6 +115,48 @@ header .lista .link {
   color: white;
   font-family: "BBH Sans Bartle", sans-serif;
 }
+/*ROBOT*/
+/* === ROBOT FLOTANTE === */
+#bot {
+  position: fixed;         /* flota sobre toda la página */
+  left: 0;
+  top: 0;
+  transform: translate(0,0);
+  width: 70px;             /* ajustá según tu imagen */
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3); /* halo translúcido detrás */
+  backdrop-filter: blur(6px);     /* efecto vidrio */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  pointer-events: none;    /* no bloquea clics en la página */
+  will-change: transform;
+  z-index: 9999;           /* siempre por encima */
+  transition: filter 0.2s ease;
+}
+
+/* La imagen del robot */
+#bot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #00eaff); /* leve resplandor cian */
+}
+
+/* Efecto de "brillo" cuando se mueve */
+#bot.moving img {
+  filter: drop-shadow(0 0 15px #00ffff) saturate(1.5);
+}
+
+/* Accesibilidad: si el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  #bot {
+    right: 16px;
+    bottom: 16px;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+}
 /*----------------------FIN INDEX-----------------------*/
 
 /*----------------------DEEP LEARNING-------------------*/

@@ -44,16 +44,37 @@
 </div>
 
 <div class="parrafos-prin">
-    <p id="p1-prin">
-        Deep learning es una rama del Machine
-    </p>
-    <p id="p2-prin">
-        El ML es el aprendizaje automatico
-    </p>
-    <p id="p3-prin">
-        Deep learning es un aprendizaje automatico pero profundo
-    </p>
-</div>
+    <p id="p1-prin">Deep learning es una rama del Machine</p>
+    <p id="p2-prin">El ML es el aprendizaje automático</p>
+    <p id="p3-prin">Deep learning es un aprendizaje automático pero profundo</p>
+  </div>
 
+<!-- BOT: usá 🤖 o una imagen -->
+<div id="bot" aria-hidden="true" title="Hola!">
 
+    <img src="./Imagenes/robot1.png" alt="" />
+  </div>
+  
+  <script>
+    const bot = document.getElementById('bot');
+    let x = innerWidth - 80, y = innerHeight - 80;  // posición inicial
+    let tx = x, ty = y;                              // objetivo (target)
+  
+    // Sigue al puntero (desktop)
+    addEventListener('mousemove', e => { tx = e.clientX + 16; ty = e.clientY + 16; });
+  
+    // En móvil: se ancla abajo-derecha y “salta” cuando tocás
+    addEventListener('touchstart', e => {
+      const t = e.touches[0];
+      tx = t.clientX + 16; ty = t.clientY + 16;
+    }, {passive:true});
+  
+    // Suavizado (lerp)
+    (function loop(){
+      x += (tx - x) * 0.15;
+      y += (ty - y) * 0.15;
+      bot.style.transform = `translate(${x}px, ${y}px)`;
+      requestAnimationFrame(loop);
+    })();
+  </script>
 </body>

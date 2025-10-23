@@ -83,7 +83,7 @@ function crearCard(titulo, parrafos, contenedorId) {
 
 async function cargarCards() {
   try {
-    const respuesta = await fetch("../jsons/ml.json"); // ajustá la ruta si es necesario
+    const respuesta = await fetch("../jsons/ml.json");
     const datos = await respuesta.json();
 
     // Recorre los items dentro del JSON (el items ese es el nombre que esta en la linea 2 del json).
@@ -166,7 +166,7 @@ function crearCardVentDes(titulo, lista, contenedorId) {
 
 async function cargarCardsVentDes() {
   try {
-    const respuesta = await fetch("../jsons/ml.json"); // ajustá la ruta
+    const respuesta = await fetch("../jsons/ml.json"); 
     const datos = await respuesta.json();
 
     // Recorre los items3 (por ejemplo)
