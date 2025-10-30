@@ -175,48 +175,6 @@ header .lista .link {
   color: white;
   font-family: "BBH Sans Bartle", sans-serif;
 }
-/*ROBOT*/
-/* === ROBOT FLOTANTE === */
-#bot {
-  position: fixed;         /* flota sobre toda la página */
-  left: 0;
-  top: 0;
-  transform: translate(0,0);
-  width: 70px;             /* ajustá según tu imagen */
-  height: 70px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3); /* halo translúcido detrás */
-  backdrop-filter: blur(6px);     /* efecto vidrio */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  pointer-events: none;    /* no bloquea clics en la página */
-  will-change: transform;
-  z-index: 9999;           /* siempre por encima */
-  transition: filter 0.2s ease;
-}
-
-/* La imagen del robot */
-#bot img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 0 8px #00eaff); /* leve resplandor cian */
-}
-
-/* Efecto de "brillo" cuando se mueve */
-#bot.moving img {
-  filter: drop-shadow(0 0 15px #00ffff) saturate(1.5);
-}
-
-/* Accesibilidad: si el usuario prefiere menos movimiento */
-@media (prefers-reduced-motion: reduce) {
-  #bot {
-    right: 16px;
-    bottom: 16px;
-    left: auto;
-    top: auto;
-    transform: none;
-  }
-}
 /*----------------------FIN INDEX-----------------------*/
 
 /*----------------------DEEP LEARNING-------------------*/
@@ -244,16 +202,18 @@ header .lista .link {
   padding: 1.5rem;
   border: 2px solid transparent; /* el borde real es transparente */
   border-radius: 12px;
-  /* gradiente aplicado al borde */
-  background-image: linear-gradient(#0d1117, #0d1117),
-                    linear-gradient(90deg, #00ffd5, #8c52ff);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  /* 24px */
 }
 
-#descripcion-h2 {
-  color: #08C6AB;
+.titulosHovers > span {
+  color: #d2ff00;
+  transition: color 0.5s ease;
+  display: inline-block;
+  font-weight: 700;     /* o "bold" */
+  font-size: 2rem;      /* ajustá según tu diseño */
+}
+
+.titulosHovers > span:hover {
+  color: #000;
 }
 
 #descripcion-lista {
@@ -264,6 +224,7 @@ header .lista .link {
   margin-top: 3.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
+  color: #000000;
 }
 
 #modelos-h2 {
@@ -275,15 +236,6 @@ header .lista .link {
 }
 
 .modelos-cajas{
-  border: 2px solid transparent;
-  background-image: linear-gradient(45deg,
-    #0d1117 0%,         /* azul oscuro casi negro en el top */
-    #0f2233 20%,        /* azul profundo */
-    #1b1d3b 55%,        /* transición hacia púrpura */
-    #2a0845 100%        /* violeta/morado profundo abajo */),
-                    linear-gradient(220deg, #00ffd5, #8c52ff);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-top: 1.5rem;
@@ -298,24 +250,24 @@ header .lista .link {
 
 .modelos-cajas>article {
   /*border: 1px solid #e5e7eb;*/
-  background: #00337a; /* color interno oscuro #00183a */
+  background: #1c2813; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
   border-radius: 12px;
-  /* gradiente aplicado al borde */
-  background-image: linear-gradient(#0d1117, #0d1117),
-                    linear-gradient(90deg, #365faa, #365faa);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
   padding: 10px;
 }
 
 
 .modelos-cajas > article> div > span{
-  background-color: #8c52ff;
+  background-color: #d2ff00;
   border-radius: 8px;
   border: 2px solid transparent;
   padding: 3px;
   margin: 10px;
+}
+.modelos-cajas > article > div > span > a {
+  font-weight: 700;        /* o bold */
+  color: #000000;          /* el color que quieras */
+  text-decoration: none;   /* saca el subrayado */
 }
 
 .modelos-cajas > article > div > div{

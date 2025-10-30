@@ -16,6 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
+
   <title>FAI-AI</title>
 </head>
 
@@ -53,7 +55,7 @@
 
     <!-- Cómo funciona -->
     <section id="descripcion">
-      <h2 id="descripcion-h2">Cómo funciona</h2>
+      <h2 id="descripcion-h2" class="titulosHovers">Cómo funciona</h2>
       <p>
         Las redes neuronales profundas imitan el funcionamiento del cerebro humano. Están formadas por capas de nodos
         interconectados (neuronas artificiales) que procesan información de manera jerárquica.
@@ -70,7 +72,7 @@
 
     <!-- Modelos principales -->
     <section id="modelos">
-      <h2 id="modelos-h2"> Modelos principales</h2>
+      <h2 id="modelos-h2" class="titulosHovers"> Modelos principales</h2>
       <div class="modelos-cajas" id="contenedorModeloPrincipal">
 
         <template id="modelosPrincipalesDP">
@@ -88,100 +90,12 @@
             <p></p>
           </article>
         </template>
-
-
-        <!--
-     
-        <article>
-          <div>
-            <span> <a href="../dl-CNN.html">CNN</a> </span>
-            <div>
-              <span>Visión</span>
-              <span>Clasificación</span>
-              <span>Detección</span>
-            </div>
-          </div>
-          <h2>Convolutional Neural Networks</h2>
-          <p>Visión artificial</p>
-          <p>Detecta patrones en imágenes. Se usa en reconocimiento facial y vehículos autónomos.</p>
-        </article>
-      
-        <article>
-          <div>
-            <span><a href="../RNN-LSTM-GRU.html"> RNN / LSTM / GRU</a> </span>
-            <div>
-              <span>Secuencias</span>
-              <span>Audio</span>
-              <span>Texto</span>
-            </div>
-          </div>
-          <h2>Redes Recurrentes</h2>
-          <p>Lenguaje y secuencias</p>
-          <p>Maneja información temporal como texto o audio.</p>
-        </article>
-
-        <article>
-          <div>
-            <span> <a href="../transformers.html">Transformers</a></span>
-            <div>
-              <span>PLN</span>
-              <span>Codificación</span>
-              <span>Traducción</span>
-            </div>
-          </div>
-          <h2>Mecanismo de Atención</h2>
-          <p>Procesamiento de texto</p>
-          <p>Base de modelos como GPT o BERT; procesan en paralelo con <em>attention mechanisms</em>.</p>
-        </article>
-
-        <article>
-          <div>
-            <span><a href="../vae.html">VAE</a></span>
-            <div>
-              <span>Latentes</span>
-              <span>Compresión</span>
-              <span>Sampling</span>
-            </div>
-          </div>
-          <h2>Variational Autoencoders</h2>
-          <p>IA generativa</p>
-          <p>Comprimen y generan variaciones de datos; base de GANs y modelos de difusión.</p>
-        </article>
-
-        <article>
-          <div>
-            <span> <a href="../gans.html">GANs</a></span>
-            <div>
-              <span>Generación</span>
-              <span>Imagen</span>
-              <span>Video</span>
-            </div>
-          </div>
-          <h2>Generative Adversarial Networks</h2>
-          <p>Imágenes realistas</p>
-          <p>Dos redes en competencia: generador vs discriminador.</p>
-        </article>
-
-        <article>
-          <div>
-            <span><a href="../difusion.html">Difusión</a></span>
-            <div>
-              <span>Imagen</span>
-              <span>Síntesis</span>
-              <span>Creatividad</span>
-            </div>
-          </div>
-          <h2>Modelos de difusión</h2>
-          <p>Imágenes de alta calidad</p>
-          <p>Como Stable Diffusion o Imagen; añaden y eliminan ruido hasta crear resultados fotorrealistas.</p>
-        </article>
-      -->
       </div>
     </section>
 
     <!-- Casos de uso -->
     <section id="modelos">
-      <h2 id=modelos-h2>Casos de uso en el mundo real</h2>
+      <h2 id=modelos-h2 class="titulosHovers">Casos de uso en el mundo real</h2>
       <div class="modelos-cajas">
         <div>
           <h3>Industria</h3>
@@ -212,7 +126,7 @@
 
     <!-- Áreas destacadas -->
     <section id="areas">
-      <h2 id="areas-h2">Áreas destacadas</h2>
+      <h2 id="areas-h2" class="titulosHovers">Áreas destacadas</h2>
       <div id="areas-grid">
         <div id="area-card">
           <h3>Procesamiento del Lenguaje Natural (PLN)</h3>
@@ -239,7 +153,7 @@
 
     <!-- Ventajas, desafíos y futuro -->
     <section id="areas">
-      <h2 id="ventajas">Ventajas, desafíos y futuro</h2>
+      <h2 id="ventajas" class="titulosHovers">Ventajas, desafíos y futuro</h2>
       <div class="VD-Grid">
         <div id="area-card">
           <h3>Ventajas</h3>
@@ -268,21 +182,8 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA final -->
-    <!--<section aria-labelledby="cta">
-      <div>
-        <div>
-          <h3 id="cta">¿Listo para construir con Deep Learning?</h3>
-          <p>Explora notebooks, datasets y guías prácticas para llevar tus ideas a producción.</p>
-        </div>
-        <div>
-          <a href="#">Ver ejemplos</a>
-          <a href="#">Documentación</a>
-        </div>
-      </div>
-    </section>-->
   </main>
     <script src="../js/dl.js"></script>
+    <script src="../JS/letrasHover.js"></script>
 </body>
 </html>
