@@ -4,7 +4,7 @@
       "titulo": "NEUROAI",
       "animacion": "animate__rubberBand",
       "imagen": {
-        "src": "./Imagenes/Dall-e_3_jan_24_artificial_intelligence_icon.png",
+        "src": "./Imagenes/robot_brain_removedbg.png",
         "alt": "Icono representando inteligencia artificial"
       }
     },

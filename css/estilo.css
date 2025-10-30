@@ -75,7 +75,7 @@ body > * {
   position: relative;
   z-index: 2;
 }
-/* #37465B; */
+/* #37465B */
 
 /*Agregado 29/09*/
 header {
@@ -84,7 +84,7 @@ header {
   justify-content: space-between;
 }
 
-/*5AFFE7 verde agua claro*/
+/*d2ff00 amarillo fluo*/
 
 header .conjunto {
   display: flex;
@@ -116,7 +116,7 @@ header .conjunto .titulo h1 a {
 
 
 header .conjunto .titulo h1 a:visited {
-  color: white;
+  color: #d2ff00;
 }
 
 header .lista {
@@ -129,13 +129,62 @@ header .lista {
 }
 
 header .lista .link {
-  color: white;
+  color: #d2ff00;
   text-decoration: none;
   display: flex;
   padding: 15px 13px;
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1rem;
 }
+
+/*--------------------HEADER CARRUSEL-----------------------------*/
+
+/* Header marquee por item usando IDs */
+@keyframes headerMarquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-100vw - 100%)); }
+}
+
+.nav-carousel {
+  overflow: hidden;
+  flex: 1 1 auto;
+  height: calc(1.5em + 30px);
+}
+
+.nav-carousel .nav-track {
+  position: relative;
+  height: 100%;
+}
+
+.nav-carousel .lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+.nav-carousel .lista .link {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Fuerza pausa con alta especificidad (IDs) */
+header:hover #header-uno,
+header:hover #header-dos,
+header:hover #header-tres {
+  animation-play-state: paused;
+}
+
+/* Espaciado visual entre palabras al reentrar */
+#header-uno  { animation: headerMarquee 10s linear infinite; animation-delay: 0s; }
+#header-dos  { animation: headerMarquee 10s linear infinite; animation-delay: 2s; }
+#header-tres { animation: headerMarquee 10s linear infinite; animation-delay: 4s; }
 
 
 /*--------------------INDEX-----------------------------*/
@@ -154,6 +203,29 @@ header .lista .link {
 
 .body .imgPrin{
   width: 30rem;
+}
+/* Swap de cerebro por robot al hover */
+.imgSwap{
+  position: relative;
+}
+.imgSwap img{
+  width: 30rem;
+  display: block;
+}
+.imgSwap .imgAlt{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.imgSwap .imgPrin{
+  transition: opacity 0.5s ease;
+}
+.imgSwap:hover .imgPrin{
+  opacity: 0;
+}
+.imgSwap:hover .imgAlt{
+  opacity: 1;
 }
 .parrafos-prin{
   display: flex;
