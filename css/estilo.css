@@ -214,6 +214,7 @@ header:hover #header-tres {
 }
 .imgSwap .imgAlt{
   position: absolute;
+  padding-top: 7%; /*ajustar la posicion de la cabeza con el cerebro*/
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease;
@@ -223,11 +224,14 @@ header:hover #header-tres {
     transform: scale(0.8); /*asi se ve mas chico el cerebro*/
 }
 
+/*efecto de cerebro visible aun*/
+
 .imgSwap:hover .imgPrin{
-  opacity: 0;
-}
-.imgSwap:hover .imgAlt{
   opacity: 1;
+}
+
+.imgSwap:hover .imgAlt{
+  opacity: 0.8; 
 }
 .parrafos-prin{
   display: flex;
