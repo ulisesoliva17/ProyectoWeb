@@ -1,67 +1,42 @@
-/*function crearCardCNN(item, contenedorId) {
-  // Obtiene la plantilla del HTML
-  const plantilla = document.getElementById("modelosPrincipalesDP");
-  const clon = plantilla.content.cloneNode(true);
+// ===============================================
+// dl.js — Carga de tarjetas y animaciones de scroll
+// ===============================================
 
-  // Asigna el enlace principal (nombre y link)
-  const enlace = clon.querySelector("a");
-  enlace.href = item.link;
-  enlace.textContent = item.nombre;
+// Espera a que el DOM esté cargado y, cuando eso ocurra, llama a cargarCardsCNN.
+// (Esta línea registra un listener para DOMContentLoaded.)
+// Nota: el "*/" al final cierra un bloque de comentario previo en tu archivo.
 
-  // Asigna los tags (Visión, Clasificación, etc.)
-  const spans = clon.querySelectorAll("div > div > span");
-  if (item.tags && item.tags.length >= 3) {
-    spans[0].textContent = item.tags[0];
-    spans[1].textContent = item.tags[1];
-    spans[2].textContent = item.tags[2];
-  }
-
-  // Asigna el título principal (h2)
-  clon.querySelector("h2").textContent = item.titulo;
-
-  // Asigna los párrafos (subtítulo y descripción)
-  const pTags = clon.querySelectorAll("p");
-  pTags[0].textContent = item.subtitulo || "";
-  pTags[1].textContent = item.descripcion || "";
-
-  // Inserta el clon en el contenedor indicado
-  const contenedor = document.getElementById(contenedorId);
-  if (contenedor) {
-    contenedor.appendChild(clon);
-  } else {
-    console.warn(`No existe el contenedor con id "${contenedorId}"`);
-  }
-}
-
-async function cargarCardsCNN() {
-  try {
-    // Carga el JSON
-    const respuesta = await fetch("../jsons/dl.json");
-    const datos = await respuesta.json();
-
-    // Recorre los items dentro del JSON y crea las cards
-    datos.items.forEach(item => {
-      crearCardCNN(item, "contenedorModeloPrincipal"); // "redesNeuronales" es el id del contenedor
-    });
-  } catch (error) {
-    console.error("Error al cargar las tarjetas CNN:", error);
-  }
-}
-
-// Espera a que el DOM esté cargado
-document.addEventListener("DOMContentLoaded", cargarCardsCNN);*/
+// -----------------------------------------------
+// Función: revealOnScrollAnimate
+// Recorre un conjunto de elementos y, cuando entran
+// al viewport (con cierto margen), les aplica clases
+// de Animate.css para animarlos una sola vez.
+// -----------------------------------------------
 function revealOnScrollAnimate() {
-  const elementos = document.querySelectorAll(".modelos-cajas, #Ind,#area-card, .modelos-cajas > article, #ventajas, #modelos-h2, #descripcion-h2, #areas-h2");
+  // Selecciona los elementos que querés animar al hacer scroll
+  const elementos = document.querySelectorAll(
+    ".modelos-cajas, #Ind,#area-card, .modelos-cajas > article, #ventajas, #modelos-h2, #descripcion-h2, #areas-h2"
+  );
+
+  // Altura visible de la ventana para calcular cuándo un elemento es “revelable”
   const ventanaAltura = window.innerHeight;
 
   elementos.forEach((el, index) => {
+    // Posición del elemento relativa a la ventana
     const elTop = el.getBoundingClientRect().top;
 
+    // Si el elemento está lo suficientemente arriba y aún no fue revelado...
     if (elTop < ventanaAltura - 100 && !el.classList.contains("revelado")) {
+      // Se retrasa levemente cada animación para un efecto escalonado
       setTimeout(() => {
+        // Hace visible el elemento
         el.style.opacity = 1;
+
+        // Asegura la clase base de animate.css
         el.classList.add("animate__animated");
-        //A medida que voy bajando por el scroll 
+
+        // Decide qué animación aplicar según el tipo/ID/clase del elemento
+        // (esto permite diferentes efectos para diferentes secciones)
         if (el.classList.contains("area-card")) {
           el.classList.add("animate__animated", "animate__fadeInLeft");
           el.classList.add("animate__zoomOutUp");
@@ -69,32 +44,38 @@ function revealOnScrollAnimate() {
           el.classList.add("animate__fadeInLeft");
         } else if (el.id === "descripcion-h2" || el.id == "Ind") {
           el.classList.add("animate__heartBeat");
-        }else if(el.classList.contains("modelos-cajas")){
+        } else if (el.classList.contains("modelos-cajas")) {
           el.classList.add("animate__fadeInLeft");
         } else {
-          el.classList.add("animate__fadeInUp"); //hace que aparezcan de abajo. 
+          // Animación por defecto si no entra en ningún caso anterior
+          el.classList.add("animate__fadeInUp"); // hace que aparezcan desde abajo
         }
 
+        // Marca el elemento como ya revelado para no repetir la animación
         el.classList.add("revelado");
-      }, index * 20);
+      }, index * 20); // 20ms por elemento para el efecto “en cascada”
     }
-
   });
-} 
+}
 
-
-
-
-
-
+// -----------------------------------------------
+// Función: crearCardCNN(item)
+// Clona un <template> del DOM, completa sus campos
+// con los datos del item recibido y devuelve el clon.
+// -----------------------------------------------
 function crearCardCNN(item) {
+  // Obtiene el <template> por ID
   const plantilla = document.getElementById("modelosPrincipalesDP");
+
+  // Clona el contenido del template (true = clon profundo)
   const clon = plantilla.content.cloneNode(true);
 
+  // Referencia al enlace principal de la card y lo completa
   const enlace = clon.querySelector("a");
   enlace.href = item.link;
   enlace.textContent = item.nombre;
 
+  // Coloca hasta 3 tags en los <span> esperados dentro de la card
   const spans = clon.querySelectorAll("div > div > span");
   if (item.tags && item.tags.length >= 3) {
     spans[0].textContent = item.tags[0];
@@ -102,18 +83,22 @@ function crearCardCNN(item) {
     spans[2].textContent = item.tags[2];
   }
 
+  // Título principal de la card
   clon.querySelector("h2").textContent = item.titulo;
 
+  // Par de párrafos: subtítulo y descripción (si hay)
   const pTags = clon.querySelectorAll("p");
   pTags[0].textContent = item.subtitulo || "";
   pTags[1].textContent = item.descripcion || "";
 
+  // Ajustes visuales y hover sobre el <article> (contenedor de la card)
   const article = clon.querySelector("article");
   if (article) {
+    // Clase base para animaciones y opacidad inicial 0 (se revelará luego)
     article.classList.add("animate__animated");
     article.style.opacity = 0;
 
-    // Hover con zoom
+    // Efecto zoom on hover (entrada/salida)
     article.addEventListener("mouseenter", () => {
       article.style.transform = "scale(1.05)";
       article.style.transition = "transform 0.3s ease";
@@ -123,48 +108,70 @@ function crearCardCNN(item) {
     });
   }
 
+  // Devuelve el DocumentFragment clonado y completado
   return clon;
 }
 
+// -----------------------------------------------
+// Función: cargarCardsCNN()
+// Pide datos al backend (/api/dl), itera items y
+// va agregando cada card al contenedor principal.
+// -----------------------------------------------
 async function cargarCardsCNN() {
   try {
-    // Carga el JSON
-    const respuesta = await fetch("../jsons/dl.json");
+    // Llamada al endpoint REST que devuelve el JSON
+    const respuesta = await fetch("/api/dl");
+
+    // Parseo de la respuesta como JSON
     const datos = await respuesta.json();
 
-    // Obtiene el contenedor
+    // Contenedor donde se inyectarán las cards
     const contenedor = document.getElementById("contenedorModeloPrincipal");
     if (!contenedor) {
-      console.warn(`No existe el contenedor con id "contenedorModeloPrincipal"`);
+      console.warn('No existe el contenedor con id "contenedorModeloPrincipal"');
       return;
     }
 
-    // Recorre los items y agrega las cards
+    // Por cada item del JSON, crear la card y anexarla al DOM
     datos.items.forEach(item => {
       const card = crearCardCNN(item);
       contenedor.appendChild(card);
     });
   } catch (error) {
+    // Log en consola por si la carga falla
     console.error("Error al cargar las tarjetas CNN:", error);
   }
 }
 
+// -----------------------------------------------
+// Función: parallaxBackground()
+// Mueve la posición vertical del background del <body>
+// en función del scroll para dar efecto parallax simple.
+// -----------------------------------------------
 function parallaxBackground() {
   document.body.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
 }
 
+// -----------------------------------------------
+// Registro de listeners al cargar el DOM:
+// - Carga inicial de cards
+// - Primer chequeo de animaciones
+// - Listeners de scroll para animaciones y parallax
+// -----------------------------------------------
 
-
-
-// Espera a que el DOM esté cargado
-//document.addEventListener("DOMContentLoaded", cargarCardsCNN);
+// document.addEventListener("DOMContentLoaded", cargarCardsCNN);
 document.addEventListener("DOMContentLoaded", () => {
- // animateTextByLetter("dl-h1");
- // animateTextByLetter("ventajas");
+  // Llamadas opcionales a animaciones de texto (comentadas en tu código)
+  // animateTextByLetter("dl-h1");
+  // animateTextByLetter("ventajas");
 
+  // Carga de cards desde el backend
   cargarCardsCNN();
+
+  // Chequeo inicial de elementos visibles para animar
   revealOnScrollAnimate();
 
+  // En cada scroll: re-evaluar animaciones y actualizar el parallax
   window.addEventListener("scroll", () => {
     revealOnScrollAnimate();
     parallaxBackground();
