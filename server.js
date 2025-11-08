@@ -104,6 +104,25 @@ app.get("/api/dl", (req, res) => {
 });
 
 // ===============================================
+// 🔢 GET /api/dl/pos/:index → buscar por posición
+// ===============================================
+app.get("/api/dl/pos/:index", (req, res) => {
+  try {
+    const data = leerJSON();
+    const index = parseInt(req.params.index);
+
+    if (isNaN(index) || index < 0 || index >= data.items.length) {
+      return res.status(400).json({ error: "Índice fuera de rango o inválido" });
+    }
+
+    res.json(data.items[index]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error al buscar por posición" });
+  }
+});
+
+// ===============================================
 // POST /api/dl → agrega un nuevo modelo
 // ===============================================
 app.post("/api/dl", (req, res) => {
