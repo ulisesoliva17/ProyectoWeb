@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------
 Para Agregar  (Probado),  falta probar en caso de repetir nombre
 ---------------------------------------------------------------------
-fetch("/api/dl", {
+fetch("/api/dl", {   // enviamos la solicitud al enpoint
   method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
+  headers: { "Content-Type": "application/json" }, //Decimo que vamos a enviat un jason 
+  body: JSON.stringify({  //convierte el js a Json
     nombre: "ResNet",
     link: "../html/resnet.html",
     tags: ["Visión", "Clasificación de Imágenes"],
@@ -13,17 +13,17 @@ fetch("/api/dl", {
     descripcion: "Red neuronal con skip connections que facilitan el entrenamiento de redes muy profundas."
   })
 })
-  .then(res => res.json())
-  .then(console.log)
-  .catch(console.error);
+  .then(res => res.json()) // Convierte la respuesta HTTP a JSON 
+  .then(console.log) // muestra el resultado por consola
+  .catch(console.error); 
 
 ---------------------------------------------------------------------------------
 Para eliminar por el nombre     (Probado)
 ---------------------------------------------------------------------------------
-fetch("/api/dl/ResNet", {    //ResNet es lo que quiero eliminar 
-  method: "DELETE"
+fetch("/api/dl/ResNet", {    //ResNet es lo que quiero eliminar, llama al metodo 
+  method: "DELETE"  //metodo HTTP DELETE para eliminar un recurso
 })
-  .then(res => res.json())
+  .then(res => res.json())  //convierte la respuesta a json
   .then(console.log)
   .catch(console.error);
 
@@ -33,8 +33,8 @@ Para actualizar modelos existente
 ---------------------------------------------------------------------------------
 fetch("/api/dl/ResNet", {  //ResNet es el campo que quiero actualizar
   method: "PUT",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
+  headers: { "Content-Type": "application/json" }, //indicamos que el cuerpo viene en formate JSON
+  body: JSON.stringify({  //Contenido con los campos que queremos actualizar
     //Van el nombre de los campos que quiero actualizar
     descripcion: "Versión actualizada de ResNet con más capas.",
     tags: ["Visión", "Red profunda"]
@@ -48,24 +48,24 @@ fetch("/api/dl/ResNet", {  //ResNet es el campo que quiero actualizar
   Para buscar por nombre
   --------------------------------------------------------------------------------
   fetch("/api/dl/nombre/CNN")
-  .then(res => res.json())
-  .then(console.log)
+  .then(res => res.json()) // Convierte la respuesta en JSON
+  .then(console.log) //Mostramos resultado por consola
   .catch(console.error);
 
   --------------------------------------------------------------------------------
   Para buscar por posicion
   --------------------------------------------------------------------------------
   fetch("/api/dl/pos/1")
-  .then(res => res.json())
-  .then(console.log)
+  .then(res => res.json())// Convierte la respuesta en JSON
+  .then(console.log) //Mostramos resultado por consola
   .catch(console.error);
 
   --------------------------------------------------------------------------------
   Para ver todos los modelos 
   --------------------------------------------------------------------------------
   fetch("/api/dl")
-  .then(res => res.json())
-  .then(console.log)
+  .then(res => res.json())// Convierte la respuesta en JSON
+  .then(console.log) //Mostramos resultado por consola
   .catch(console.error);
 
 
