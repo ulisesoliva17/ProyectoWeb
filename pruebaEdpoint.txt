@@ -1,0 +1,71 @@
+---------------------------------------------------------------------
+Para Agregar  (Probado),  falta probar en caso de repetir nombre
+---------------------------------------------------------------------
+fetch("/api/dl", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    nombre: "ResNet",
+    link: "../html/resnet.html",
+    tags: ["Visión", "Clasificación de Imágenes"],
+    titulo: "Red Residual",
+    subtitulo: "Arquitectura profunda con conexiones de salto",
+    descripcion: "Red neuronal con skip connections que facilitan el entrenamiento de redes muy profundas."
+  })
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+---------------------------------------------------------------------------------
+Para eliminar por el nombre     (Probado)
+---------------------------------------------------------------------------------
+fetch("/api/dl/ResNet", {    //ResNet es lo que quiero eliminar 
+  method: "DELETE"
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+
+---------------------------------------------------------------------------------
+Para actualizar modelos existente 
+---------------------------------------------------------------------------------
+fetch("/api/dl/ResNet", {  //ResNet es el campo que quiero actualizar
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    //Van el nombre de los campos que quiero actualizar
+    descripcion: "Versión actualizada de ResNet con más capas.",
+    tags: ["Visión", "Red profunda"]
+  })
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+  --------------------------------------------------------------------------------
+  Para buscar por nombre
+  --------------------------------------------------------------------------------
+  fetch("/api/dl/nombre/CNN")
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+  --------------------------------------------------------------------------------
+  Para buscar por posicion
+  --------------------------------------------------------------------------------
+  fetch("/api/dl/pos/1")
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+  --------------------------------------------------------------------------------
+  Para ver todos los modelos 
+  --------------------------------------------------------------------------------
+  fetch("/api/dl")
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+

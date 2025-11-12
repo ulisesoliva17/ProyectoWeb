@@ -1,9 +1,13 @@
 {
-"items": [
+  "items": [
     {
       "nombre": "CNN",
       "link": "../html/dl-CNN.html",
-      "tags": ["Visión", "Clasificación", "Detección"],
+      "tags": [
+        "Visión",
+        "Clasificación",
+        "Detección"
+      ],
       "titulo": "Convolutional Neural Networks",
       "subtitulo": "Visión artificial",
       "descripcion": "Detecta patrones en imágenes. Se usa en reconocimiento facial y vehículos autónomos."
@@ -11,7 +15,11 @@
     {
       "nombre": "RNN/LSTM/GRU",
       "link": "../html/RNN-LSTM-GRU.html",
-      "tags": ["Secuencias", "Texto", "Audio"],
+      "tags": [
+        "Secuencias",
+        "Texto",
+        "Audio"
+      ],
       "titulo": "Redes Recurrentes",
       "subtitulo": "Lenguaje y secuencias",
       "descripcion": "Maneja información temporal como texto o audio."
@@ -19,7 +27,11 @@
     {
       "nombre": "Transformers",
       "link": "../html/transformers.html",
-      "tags": ["PLN", "Codificación", "Traducción"],
+      "tags": [
+        "PLN",
+        "Codificación",
+        "Traducción"
+      ],
       "titulo": "Mecanismo de Atención",
       "subtitulo": "Procesamiento de texto",
       "descripcion": "Base de modelos como GPT o BERT; procesan en paralelo con <em>attention mechanisms</em>."
@@ -27,7 +39,11 @@
     {
       "nombre": "VAE",
       "link": "../html/vae.html",
-      "tags": ["Latentes", "Compresión", "Sampling"],
+      "tags": [
+        "Latentes",
+        "Compresión",
+        "Sampling"
+      ],
       "titulo": "Variational Autoencoders",
       "subtitulo": "IA generativa",
       "descripcion": "Comprimen y generan variaciones de datos; base de GANs y modelos de difusión."
@@ -35,7 +51,11 @@
     {
       "nombre": "GANs",
       "link": "../html/gans.html",
-      "tags": ["Generación", "Imagen", "Video"],
+      "tags": [
+        "Generación",
+        "Imagen",
+        "Video"
+      ],
       "titulo": "Generative Adversarial Networks",
       "subtitulo": "Imágenes realistas",
       "descripcion": "Dos redes en competencia: generador vs discriminador."
@@ -43,12 +63,14 @@
     {
       "nombre": "Difusión",
       "link": "../html/difusion.html",
-      "tags": ["Imagen", "Síntesis", "Creatividad"],
+      "tags": [
+        "Imagen",
+        "Síntesis",
+        "Creatividad"
+      ],
       "titulo": "Modelos de difusión",
-      "subtitulo": "Imágenes de alta calidad<",
+      "subtitulo": "Imágenes de alta calidad",
       "descripcion": "Como Stable Diffusion o Imagen; añaden y eliminan ruido hasta crear resultados fotorrealistas."
     }
   ]
-
-
 }
