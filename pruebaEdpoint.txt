@@ -69,3 +69,4 @@ fetch("/api/dl/ResNet", {  //ResNet es el campo que quiero actualizar
   .catch(console.error);
 
 
+//Aclaracion los que GET, no es necesario hacer method: "GET", ya el fetch ya utilizar el get automaticamente
