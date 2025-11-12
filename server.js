@@ -93,29 +93,29 @@ function escribirJSON(data) {
 // ===============================================
 // GET /api/dl → obtiene todos los modelos
 // ===============================================
-app.get("/api/dl", (req, res) => {
+app.get("/api/dl", (req, res) => {  //Define la ruta 
   try {
-    const data = leerJSON();
-    res.json(data);
+    const data = leerJSON();  // Lee archivo y lo convertimos en objeto 
+    res.json(data);           // devuelvo el contenido 
   } catch (err) {
-    console.error("Error al leer el JSON:", err);
-    res.status(500).json({ error: "No se pudo leer el archivo JSON" });
+    console.error("Error al leer el JSON:", err);   //muestra el error
+    res.status(500).json({ error: "No se pudo leer el archivo JSON" }); // error 500 si algo falla
   }
 });
 
 // ===============================================
-// 🔢 GET /api/dl/pos/:index → buscar por posición
+// GET /api/dl/pos/:index → buscar por posición
 // ===============================================
-app.get("/api/dl/pos/:index", (req, res) => {
+app.get("/api/dl/pos/:index", (req, res) => {  //definimos ruta get con un paremetro ( index)
   try {
     const data = leerJSON();
     const index = parseInt(req.params.index);
 
-    if (isNaN(index) || index < 0 || index >= data.items.length) {
-      return res.status(400).json({ error: "Índice fuera de rango o inválido" });
+    if (isNaN(index) || index < 0 || index >= data.items.length) { //verificamos si el index es valido 
+      return res.status(400).json({ error: "Índice fuera de rango o inválido" }); // si el index no es valido error 400
     }
 
-    res.json(data.items[index]);
+    res.json(data.items[index]); // nos devuelve el modelo que esta en esa posicion
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Error al buscar por posición" });
@@ -127,17 +127,17 @@ app.get("/api/dl/pos/:index", (req, res) => {
 // ===============================================
 app.post("/api/dl", (req, res) => {
   try {
-    const data = leerJSON();
-    const nuevo = req.body;
+    const data = leerJSON(); // lee el archivo json que tenemos
+    const nuevo = req.body; // tomamos los datos de la solicitud 
 
-    if (!nuevo.nombre || !nuevo.titulo) {
+    if (!nuevo.nombre || !nuevo.titulo) { //campos que pusimos como obligatorios (tambien podriamos poner todos los campos) 
       return res.status(400).json({ error: "Faltan campos obligatorios (nombre, titulo)" });
     }
 
-    data.items.push(nuevo);
-    escribirJSON(data);
+    data.items.push(nuevo);  //agrega el nuevo modelo al json
+    escribirJSON(data); // actualiza el archivo
 
-    res.status(201).json({ mensaje: "Modelo agregado con éxito", nuevo });
+    res.status(201).json({ mensaje: "Modelo agregado con éxito", nuevo }); //devuelve mensaje de que se pudo guardar 
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "No se pudo guardar el nuevo modelo" });
@@ -149,18 +149,18 @@ app.post("/api/dl", (req, res) => {
 // ===============================================
 app.put("/api/dl/:nombre", (req, res) => {
   try {
-    const data = leerJSON();
-    const nombre = req.params.nombre;
-    const index = data.items.findIndex(item => item.nombre === nombre);
+    const data = leerJSON(); //lee el json 
+    const nombre = req.params.nombre;  // toma el nombre del modelo 
+    const index = data.items.findIndex(item => item.nombre === nombre); // busca la posicion del modelo en el array de items de json
 
     if (index === -1) {
-      return res.status(404).json({ error: "Modelo no encontrado" });
+      return res.status(404).json({ error: "Modelo no encontrado" }); // sino no exite
     }
 
-    data.items[index] = { ...data.items[index], ...req.body };
-    escribirJSON(data);
+    data.items[index] = { ...data.items[index], ...req.body }; // actualiza
+    escribirJSON(data); // guarda en json 
 
-    res.json({ mensaje: "Modelo actualizado", actualizado: data.items[index] });
+    res.json({ mensaje: "Modelo actualizado", actualizado: data.items[index] }); // devuelve lo modificado 
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "No se pudo actualizar el modelo" });
@@ -174,13 +174,13 @@ app.delete("/api/dl/:nombre", (req, res) => {
   try {
     const data = leerJSON();
     const nombre = req.params.nombre;
-    const nuevoArray = data.items.filter(item => item.nombre !== nombre);
+    const nuevoArray = data.items.filter(item => item.nombre !== nombre); //crea un nuevo arrays sin el modelo
 
-    if (nuevoArray.length === data.items.length) {
+    if (nuevoArray.length === data.items.length) { // si no se elimino el modelo, entonces no lo encontro
       return res.status(404).json({ error: "Modelo no encontrado" });
     }
 
-    escribirJSON({ items: nuevoArray });
+    escribirJSON({ items: nuevoArray }); //escribe el nuevo json 
     res.json({ mensaje: "Modelo eliminado con éxito" });
   } catch (err) {
     console.error(err);
@@ -191,13 +191,13 @@ app.delete("/api/dl/:nombre", (req, res) => {
 // ===============================================
 // Ruta raíz: / → devuelve index.html
 // ===============================================
-app.get("/", (_req, res) => {
-  res.sendFile(path.join(ROOT, "index.html"));
+app.get("/", (_req, res) => {   //definimos la ruta de servidor
+  res.sendFile(path.join(ROOT, "index.html")); // envia el archivo 
 });
 
 // ===============================================
 // Iniciar el servidor
 // ===============================================
-app.listen(PORT, () => {
-  console.log(`Servidor listo en http://localhost:${PORT}`);
+app.listen(PORT, () => {  //Inicia el servidor Express
+  console.log(`Servidor listo en http://localhost:${PORT}`); //Mostramos el mensaje de inicio. 
 });
