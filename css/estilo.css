@@ -204,7 +204,8 @@ header:hover #header-tres {
 .body .imgPrin{
   width: 30rem;
 }
-/* Swap de cerebro por robot al hover */
+/*
+Swap de cerebro por robot al hover 
 .imgSwap{
   position: relative;
 }
@@ -214,17 +215,17 @@ header:hover #header-tres {
 }
 .imgSwap .imgAlt{
   position: absolute;
-  padding-top: 7%; /*ajustar la posicion de la cabeza con el cerebro*/
+  padding-top: 7%; ajustar la posicion de la cabeza con el cerebro
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease;
 }
 .imgSwap .imgPrin{
   transition: opacity 1s ease;
-    transform: scale(0.8); /*asi se ve mas chico el cerebro*/
+    transform: scale(0.8); asi se ve mas chico el cerebro
 }
 
-/*efecto de cerebro visible aun*/
+efecto de cerebro visible aun
 
 .imgSwap:hover .imgPrin{
   opacity: 1;
@@ -232,7 +233,49 @@ header:hover #header-tres {
 
 .imgSwap:hover .imgAlt{
   opacity: 0.8; 
+} */
+ /* Contenedor principal */
+ .imgSwap {
+  position: relative;
+  /* Opcional: asegurar que el contenedor tenga el tamaño del contenido */
+  display: inline-block; 
 }
+
+/* Estilo de la imagen base (Cerebro) */
+.imgSwap .imgPrin {
+  width: 30rem;
+  display: block;
+  transition: opacity 1s ease, transform 1s ease; 
+  transform: scale(0.8); /* Cerebro chico por defecto */
+}
+
+/* Estilo del Video (Cabeza Robot) - CORREGIDO a .imgAlt */
+.imgSwap .imgAlt {
+  position: absolute;
+  width: 30rem; /* Aseguramos que mida lo mismo que la imagen base */
+  
+  /* Ajuste de posición */
+  top: 0; 
+  left: 0;
+  
+  opacity: 0; /* Invisible por defecto */
+  transition: opacity 1s ease;
+  
+  pointer-events: none; /* Importante: el mouse atraviesa el video */
+}
+
+/* --- ESTADOS HOVER --- */
+
+/* Al hacer hover, el cerebro se mantiene visible */
+.imgSwap:hover .imgPrin {
+  opacity: 1;
+}
+
+/* Al hacer hover, aparece el video - CORREGIDO a .imgAlt */
+.imgSwap:hover .imgAlt {
+  opacity: 0.8; 
+}
+
 .parrafos-prin{
   display: flex;
   padding: 3.5rem;
