@@ -7,23 +7,29 @@
 /* Desplazamiento infinito del grid */
 
 @keyframes gridScroll {
+  0% {
+    background-position: 0 0, 0 0;
+  }
 
-  0%   { background-position: 0 0, 0 0; }
-
-  100% { background-position: 50px 50px, 50px 50px; }
-
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
 }
 
 /* Movimiento del gradiente (suave) */
 
 @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
 
-  0%   { background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%;
+  }
 
-  50%  { background-position: 100% 50%; }
-
-  100% { background-position: 0% 50%; }
-
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
@@ -44,7 +50,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-image: linear-gradient(-45deg, #000000, #21392B);
+  background-image: linear-gradient(-45deg, #000000, #21392b);
   background-size: 500% 500%;
   background-repeat: no-repeat;
   background-position: 0% 50%;
@@ -59,8 +65,11 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 1;
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.14) 1px,
+      transparent 1px
+    ),
     linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
   background-size: 50px 50px, 50px 50px;
   background-repeat: repeat, repeat;
@@ -114,7 +123,6 @@ header .conjunto .titulo h1 a {
   color: #000;
 }
 
-
 header .conjunto .titulo h1 a:visited {
   color: #d2ff00;
 }
@@ -141,8 +149,12 @@ header .lista .link {
 
 /* Header marquee por item usando IDs */
 @keyframes headerMarquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-100vw - 100%)); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 100%));
+  }
 }
 
 .nav-carousel {
@@ -182,26 +194,34 @@ header:hover #header-tres {
 }
 
 /* Espaciado visual entre palabras al reentrar */
-#header-uno  { animation: headerMarquee 10s linear infinite; animation-delay: 0s; }
-#header-dos  { animation: headerMarquee 10s linear infinite; animation-delay: 2s; }
-#header-tres { animation: headerMarquee 10s linear infinite; animation-delay: 4s; }
-
+#header-uno {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 0s;
+}
+#header-dos {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 2s;
+}
+#header-tres {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 4s;
+}
 
 /*--------------------INDEX-----------------------------*/
 
-#domi{
+#domi {
   padding: 2.5rem;
   text-align: center;
-  font-size: 5rem;  
+  font-size: 5rem;
 }
 
-.body{
+.body {
   display: flex;
   justify-content: center;
   padding: 3.5rem;
 }
 
-.body .imgPrin{
+.body .imgPrin {
   width: 30rem;
 }
 /*
@@ -234,18 +254,18 @@ efecto de cerebro visible aun
 .imgSwap:hover .imgAlt{
   opacity: 0.8; 
 } */
- /* Contenedor principal */
- .imgSwap {
+/* Contenedor principal */
+.imgSwap {
   position: relative;
   /* Opcional: asegurar que el contenedor tenga el tamaño del contenido */
-  display: inline-block; 
+  display: inline-block;
 }
 
 /* Estilo de la imagen base (Cerebro) */
 .imgSwap .imgPrin {
   width: 30rem;
   display: block;
-  transition: opacity 1s ease, transform 1s ease; 
+  transition: opacity 1s ease, transform 1s ease;
   transform: scale(0.8); /* Cerebro chico por defecto */
 }
 
@@ -253,14 +273,14 @@ efecto de cerebro visible aun
 .imgSwap .imgAlt {
   position: absolute;
   width: 30rem; /* Aseguramos que mida lo mismo que la imagen base */
-  
+
   /* Ajuste de posición */
-  top: 0; 
+  top: 0;
   left: 0;
-  
+
   opacity: 0; /* Invisible por defecto */
   transition: opacity 1s ease;
-  
+
   pointer-events: none; /* Importante: el mouse atraviesa el video */
 }
 
@@ -268,21 +288,21 @@ efecto de cerebro visible aun
 
 /* Al hacer hover, el cerebro se mantiene visible */
 .imgSwap:hover .imgPrin {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Al hacer hover, aparece el video - CORREGIDO a .imgAlt */
 .imgSwap:hover .imgAlt {
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
-.parrafos-prin{
+.parrafos-prin {
   display: flex;
   padding: 3.5rem;
   flex-direction: column;
   align-items: center;
 }
-.parrafos-prin > p{
+.parrafos-prin > p {
   padding: 10rem;
   font-size: 1.5rem;
 }
@@ -314,8 +334,8 @@ efecto de cerebro visible aun
   padding-bottom: 6rem;
   /* 96px */
 }
-#dl-h1{
-  text-align:center;
+#dl-h1 {
+  text-align: center;
 }
 
 #descripcion {
@@ -329,8 +349,8 @@ efecto de cerebro visible aun
   color: #d2ff00;
   transition: color 0.5s ease;
   display: inline-block;
-  font-weight: 700;     /* o "bold" */
-  font-size: 2rem;      /* ajustá según tu diseño */
+  font-weight: 700; /* o "bold" */
+  font-size: 2rem; /* ajustá según tu diseño */
 }
 
 .titulosHovers > span:hover {
@@ -349,14 +369,14 @@ efecto de cerebro visible aun
 }
 
 #modelos-h2 {
-  color: #08C6AB;
+  color: #08c6ab;
 }
 
 #modelo-h2 {
-  color: #08C6AB;
+  color: #08c6ab;
 }
 
-.modelos-cajas{
+.modelos-cajas {
   border-radius: 0.5rem;
   padding: 1rem;
   margin-top: 1.5rem;
@@ -368,8 +388,7 @@ efecto de cerebro visible aun
   box-sizing: border-box;
 }
 
-
-.modelos-cajas>article {
+.modelos-cajas > article {
   /*border: 1px solid #e5e7eb;*/
   background: #1c2813; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
@@ -377,8 +396,7 @@ efecto de cerebro visible aun
   padding: 10px;
 }
 
-
-.modelos-cajas > article> div > span{
+.modelos-cajas > article > div > span {
   background-color: #d2ff00;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -386,12 +404,12 @@ efecto de cerebro visible aun
   margin: 10px;
 }
 .modelos-cajas > article > div > span > a {
-  font-weight: 700;        /* o bold */
-  color: #000000;          /* el color que quieras */
-  text-decoration: none;   /* saca el subrayado */
+  font-weight: 700; /* o bold */
+  color: #000000; /* el color que quieras */
+  text-decoration: none; /* saca el subrayado */
 }
 
-.modelos-cajas > article > div > div{
+.modelos-cajas > article > div > div {
   padding-top: 10px;
 }
 /*
@@ -412,12 +430,12 @@ background: rgba(255, 255, 255, 0.02);
   /* backdrop-blur-md */
 }
 
-#ventajas{
-  color: #08C6AB;
+#ventajas {
+  color: #08c6ab;
 }
 
-#areas-h2{
-  color: #08C6AB;
+#areas-h2 {
+  color: #08c6ab;
 }
 
 #areas-grid {
@@ -455,14 +473,16 @@ background: rgba(255, 255, 255, 0.02);
   /* p-5 */
 }
 
-
-.modelos-cajas-cnn{
-    background-image: linear-gradient(45deg,
-    #0d1117 0%,         /* azul oscuro casi negro en el top */
-    #0f2233 20%,        /* azul profundo */
-    #1b1d3b 55%,        /* transición hacia púrpura */
-    #2a0845 100%        /* violeta/morado profundo abajo */),
-                    linear-gradient(220deg, #00ffd5, #8c52ff);
+.modelos-cajas-cnn {
+  background-image: linear-gradient(
+      45deg,
+      #0d1117 0%,
+      /* azul oscuro casi negro en el top */ #0f2233 20%,
+      /* azul profundo */ #1b1d3b 55%,
+      /* transición hacia púrpura */ #2a0845 100%
+        /* violeta/morado profundo abajo */
+    ),
+    linear-gradient(220deg, #00ffd5, #8c52ff);
 
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -473,20 +493,21 @@ background: rgba(255, 255, 255, 0.02);
 }
 
 #modelos-h2-cnn {
-  color: #08C6AB;
+  color: #08c6ab;
 }
 
-
-
 /*----------------------------------------------------------------------*/
-.modelos-cajasml{
+.modelos-cajasml {
   border: 2px solid transparent;
-  background-image: linear-gradient(45deg,
-    #0d1117 0%,         /* azul oscuro casi negro en el top */
-    #0f2233 20%,        /* azul profundo */
-    #1b1d3b 55%,        /* transición hacia púrpura */
-    #2a0845 100%        /* violeta/morado profundo abajo */),
-                    linear-gradient(220deg, #00ffd5, #8c52ff);
+  background-image: linear-gradient(
+      45deg,
+      #0d1117 0%,
+      /* azul oscuro casi negro en el top */ #0f2233 20%,
+      /* azul profundo */ #1b1d3b 55%,
+      /* transición hacia púrpura */ #2a0845 100%
+        /* violeta/morado profundo abajo */
+    ),
+    linear-gradient(220deg, #00ffd5, #8c52ff);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   border-radius: 0.5rem;
@@ -500,22 +521,20 @@ background: rgba(255, 255, 255, 0.02);
   box-sizing: border-box;
 }
 
-
-.modelos-cajasml>article {
+.modelos-cajasml > article {
   /*border: 1px solid #e5e7eb;*/
   background: #00337a; /* color interno oscuro #00183a */
   border: 2px solid transparent; /* el borde real es transparente */
   border-radius: 12px;
   /* gradiente aplicado al borde */
   background-image: linear-gradient(#0d1117, #0d1117),
-                    linear-gradient(90deg, #365faa, #365faa);
+    linear-gradient(90deg, #365faa, #365faa);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   padding: 10px;
 }
 
-
-.modelos-cajasml > article> div > span{
+.modelos-cajasml > article > div > span {
   background-color: #8c52ff;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -523,7 +542,7 @@ background: rgba(255, 255, 255, 0.02);
   margin: 10px;
 }
 
-.modelos-cajasml > article > div > div{
+.modelos-cajasml > article > div > div {
   padding-top: 10px;
 }
 #area-cardml {
@@ -537,14 +556,12 @@ background: rgba(255, 255, 255, 0.02);
 
 /*--------------------------------------------------------------------------------------------------*/
 
-
-
 /*------------------------------------------------------------------------------*/
 /*Lo agrego para que a la hora de hacer scrool no me pareza primero y despues me haga el efecto
 sino para que me haga el efecto de una*/
 .modelos-cajas,
 .modelos-cajas > article,
 #area-card {
-  opacity: 0;              /* Oculto al inicio */
-  transition: opacity 0.3s ease;  
+  opacity: 0; /* Oculto al inicio */
+  transition: opacity 0.3s ease;
 }
