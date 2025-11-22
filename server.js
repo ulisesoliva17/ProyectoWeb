@@ -12,7 +12,7 @@ const ROOT = __dirname;
 
 // DEFINIMOS LA RUTA A LA CARPETA PUBLIC
 // Aquí le decimos que la carpeta pública está dentro de la raíz
-const PUBLIC_PATH = path.join(ROOT, "public"); 
+const PUBLIC_PATH = path.join(ROOT, "public");
 
 // La carpeta jsons sigue estando en la raíz (fuera de public), lo cual es correcto por seguridad
 const JSON_PATH = path.join(ROOT, "jsons", "dl.json");
@@ -39,7 +39,7 @@ function escribirJSON(data) {
 // ===============================================
 // RUTAS DE LA API (GET, POST, PUT, DELETE)
 // ===============================================
-// (Toda esta sección queda IDÉNTICA a tu código anterior, 
+// (Toda esta sección queda IDÉNTICA a tu código anterior,
 //  porque la lógica de la API no cambia por mover los HTML)
 
 app.get("/api/dl", (req, res) => {
@@ -57,7 +57,9 @@ app.get("/api/dl/pos/:index", (req, res) => {
     const data = leerJSON();
     const index = parseInt(req.params.index);
     if (isNaN(index) || index < 0 || index >= data.items.length) {
-      return res.status(400).json({ error: "Índice fuera de rango o inválido" });
+      return res
+        .status(400)
+        .json({ error: "Índice fuera de rango o inválido" });
     }
     res.json(data.items[index]);
   } catch (err) {
@@ -71,8 +73,19 @@ app.post("/api/dl", (req, res) => {
     const data = leerJSON();
     const nuevo = req.body;
     if (!nuevo.nombre || !nuevo.titulo) {
-      return res.status(400).json({ error: "Faltan campos obligatorios (nombre, titulo)" });
+      return res
+        .status(400)
+        .json({ error: "Faltan campos obligatorios (nombre, titulo)" });
     }
+    //Busco que no exista el nombre
+    const existe = data.items.some((item) => item.nombre === nuevo.nombre);
+
+    if (existe) {
+      return res
+        .status(409)
+        .json({ error: "Ya existe un modelo con ese nombre" });
+    }
+
     data.items.push(nuevo);
     escribirJSON(data);
     res.status(201).json({ mensaje: "Modelo agregado con éxito", nuevo });
@@ -86,7 +99,7 @@ app.put("/api/dl/:nombre", (req, res) => {
   try {
     const data = leerJSON();
     const nombre = req.params.nombre;
-    const index = data.items.findIndex(item => item.nombre === nombre);
+    const index = data.items.findIndex((item) => item.nombre === nombre);
     if (index === -1) {
       return res.status(404).json({ error: "Modelo no encontrado" });
     }
@@ -103,7 +116,7 @@ app.delete("/api/dl/:nombre", (req, res) => {
   try {
     const data = leerJSON();
     const nombre = req.params.nombre;
-    const nuevoArray = data.items.filter(item => item.nombre !== nombre);
+    const nuevoArray = data.items.filter((item) => item.nombre !== nombre);
     if (nuevoArray.length === data.items.length) {
       return res.status(404).json({ error: "Modelo no encontrado" });
     }
@@ -114,7 +127,6 @@ app.delete("/api/dl/:nombre", (req, res) => {
     res.status(500).json({ error: "No se pudo eliminar el modelo" });
   }
 });
-
 
 // ENDPOINTS DEL ML
 
@@ -169,7 +181,7 @@ app.get("/api/ml/ventajas", (req, res) => {
 app.get("/", (_req, res) => {
   // CAMBIO IMPORTANTE:
   // Ahora buscamos el index.html DENTRO de la carpeta public
-  res.sendFile(path.join(PUBLIC_PATH, "index.html")); 
+  res.sendFile(path.join(PUBLIC_PATH, "index.html"));
 });
 
 // ===============================================
