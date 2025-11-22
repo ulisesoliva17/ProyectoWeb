@@ -272,6 +272,7 @@ efecto de cerebro visible aun
 /* Estilo del Video (Cabeza Robot) - CORREGIDO a .imgAlt */
 .imgSwap .imgAlt {
   position: absolute;
+<<<<<<< HEAD
   width: 30rem; /* Aseguramos que mida lo mismo que la imagen base */
 
   /* Ajuste de posición */
@@ -282,13 +283,30 @@ efecto de cerebro visible aun
   transition: opacity 1s ease;
 
   pointer-events: none; /* Importante: el mouse atraviesa el video */
+=======
+  width: 20rem; 
+  top: 0; 
+  left: 0;
+  
+  opacity: 0; 
+  transition: opacity 1s ease;
+  pointer-events: none;
+  
+  /* --- AGREGA ESTA LÍNEA AQUÍ --- */
+  mix-blend-mode: screen; 
+  /* Esto hace que el color negro (#000000) se vuelva transparente */
+>>>>>>> 08dd6070319dbe4ec56eaa1461c7d4b248e8f2f7
 }
 
 /* --- ESTADOS HOVER --- */
 
-/* Al hacer hover, el cerebro se mantiene visible */
+/* Al hacer hover, el cerebro se mantiene visible*/
 .imgSwap:hover .imgPrin {
+<<<<<<< HEAD
   opacity: 0;
+=======
+  opacity: 0.1;
+>>>>>>> 08dd6070319dbe4ec56eaa1461c7d4b248e8f2f7
 }
 
 /* Al hacer hover, aparece el video - CORREGIDO a .imgAlt */
