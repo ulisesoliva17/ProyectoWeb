@@ -16,7 +16,6 @@ const PUBLIC_PATH = path.join(ROOT, "public");
 
 // La carpeta jsons sigue estando en la raíz (fuera de public), lo cual es correcto por seguridad
 const JSON_PATH = path.join(ROOT, "jsons", "dl.json");
-
 // ===============================================
 // Middleware
 // ===============================================
@@ -115,6 +114,54 @@ app.delete("/api/dl/:nombre", (req, res) => {
     res.status(500).json({ error: "No se pudo eliminar el modelo" });
   }
 });
+
+
+// ENDPOINTS DEL ML
+
+// Definimos la ruta al archivo UNICO de ML (si no la pusiste aún)
+const JSON_ML_PATH = path.join(ROOT, "jsons", "ml.json");
+
+// ===============================================
+// RUTAS DE MACHINE LEARNING (Leyendo todas del mismo archivo)
+// ===============================================
+
+// 1. Endpoint para "Tipos de Aprendizaje"
+// Lee el archivo entero, pero devuelve SOLO la lista 'items'
+app.get("/api/ml/tipos", (req, res) => {
+  try {
+    const rawData = fs.readFileSync(JSON_ML_PATH, "utf8");
+    const data = JSON.parse(rawData);
+    res.json(data.items); // <--- AQUÍ está el truco: enviamos solo items
+  } catch (err) {
+    res.status(500).json({ error: "Error al leer tipos de aprendizaje" });
+  }
+});
+
+// 2. Endpoint para "Casos de Uso"
+// Lee el mismo archivo, pero devuelve SOLO la lista 'items2'
+app.get("/api/ml/casos", (req, res) => {
+  try {
+    const rawData = fs.readFileSync(JSON_ML_PATH, "utf8");
+    const data = JSON.parse(rawData);
+    res.json(data.items2); // <--- Enviamos items2
+  } catch (err) {
+    res.status(500).json({ error: "Error al leer casos de uso" });
+  }
+});
+
+// 3. Endpoint para "Ventajas y Desventajas"
+// Lee el mismo archivo, pero devuelve SOLO la lista 'items3'
+app.get("/api/ml/ventajas", (req, res) => {
+  try {
+    const rawData = fs.readFileSync(JSON_ML_PATH, "utf8");
+    const data = JSON.parse(rawData);
+    res.json(data.items3); // <--- Enviamos items3
+  } catch (err) {
+    res.status(500).json({ error: "Error al leer ventajas" });
+  }
+});
+
+//FIN ENDPOINTS DEL ML
 
 // ===============================================
 // Ruta raíz: / → devuelve index.html
