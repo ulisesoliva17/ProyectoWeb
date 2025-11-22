@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Machine Learning - conceptos, tipos, casos de uso y algoritmos" />
+    <meta name="keywords" content="Machine Learning, Aprendizaje Supervisado, No Supervisado, Refuerzo, IA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>FAI-AI — Machine Learning</title>
+</head>
+
+<body>
+    <header>
+        <div class="conjunto">
+            <div class="logo">
+                <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+            </div>
+            <div class="titulo">
+                <h1><a href="../index.html">N-AI</a></h1>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="lista">
+                <li><a class="link link--1" href="../index.html">Principal</a></li>
+                <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+                <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-dl">
+        <selection id="selection-cnn">
+            <h2 id="modelos-h2-cnn">RNN/LSTM/GRU</h2>
+            <div id="modelos-cajas-cnn">
+                <p>
+                    Las RNN son un tipo de red neuronal especializada en procesar datos secuenciales o temporales, como el lenguaje natural
+                     o el reconocimiento de voz. Se diferencian de las redes tradicionales porque utilizan bucles de retroalimentación
+                      que les permiten recordar información previa, haciendo que cada salida dependa de las entradas anteriores.
+                </p>
+                <p>
+                    Se aplican en tareas como traducción automática, predicción bursátil o de ventas, procesamiento del lenguaje natural 
+                    (PLN), reconocimiento de voz y generación de texto o subtítulos, en sistemas como Siri, Google Translate o búsqueda por voz.
+
+                </p>
+                <p>
+                    El entrenamiento de una RNN se realiza mediante retropropagación en el tiempo (BPTT), una variante de la retropropagación
+                     tradicional adaptada a secuencias. Las RNN comparten los mismos pesos entre capas y ajustan estos parámetros usando
+                      descenso de gradiente.
+                </p>
+                <p>
+                    Tienen la ventaja de manejar múltiples formas de entrada y salida (una-a-muchos, muchas-a-una, muchas-a-muchas) y
+                     de combinar procesamiento y memoria. Una variante mejorada es la LSTM (Long Short-Term Memory), que soluciona las
+                      limitaciones de las RNN simples en dependencias a largo plazo.
+                </p>
+                <p>
+                    Sin embargo, presentan problemas comunes como los gradientes de desaparición (cuando dejan de aprender) y los gradientes
+                     de explosión (cuando los pesos crecen demasiado y el modelo se vuelve inestable). Además, las RNN suelen ser lentas de
+                      entrenar, difíciles de optimizar y poco eficientes con grandes conjuntos de datos.
+                </p>
+            </div>
+
+            
+
+        </selection>
+    </main>
+
+</body>
+
+</html>

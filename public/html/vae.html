@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Machine Learning - conceptos, tipos, casos de uso y algoritmos" />
+    <meta name="keywords" content="Machine Learning, Aprendizaje Supervisado, No Supervisado, Refuerzo, IA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>FAI-AI — Machine Learning</title>
+</head>
+
+<body>
+    <header>
+        <div class="conjunto">
+            <div class="logo">
+                <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+            </div>
+            <div class="titulo">
+                <h1><a href="../index.html">N-AI</a></h1>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="lista">
+                <li><a class="link link--1" href="../index.html">Principal</a></li>
+                <li><a class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+                <li><a class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-dl">
+        <selection id="selection-cnn">
+            <h2 id="modelos-h2-cnn">VAE</h2>
+            <div id="modelos-cajas-cnn">
+                <p>
+                   El deep learning permitió ir más allá del análisis de datos numéricos,
+                    añadiendo el análisis de imágenes, voz y otros tipos de datos complejos.
+                     Entre la primera clase de modelos en lograrlo se encuentran los autocodificadores
+                      variacionales (VAE). Fueron los primeros modelos de deep learning que
+                       se utilizaron ampliamente para generar imágenes y voz realistas, 
+                       lo que potenció el modelado generativo profundo al facilitar el escalado de 
+                       los modelos, que es la piedra angular de lo que consideramos la IA generativa.
+                </p>
+                <p>
+                    Los autocodificadores codifican los datos no etiquetados en una representación
+                     comprimida y luego los descodifican en su forma original. Los autocodificadores simples se utilizaban 
+                     para diversos fines, incluida la reconstrucción de imágenes corruptas o borrosas. Los autocodificadores 
+                     variacionales añadían la capacidad crucial no solo de reconstruir los datos, sino también de generar variaciones 
+                     de los datos originales.
+                </p>
+                <p>
+                    Esta capacidad de generar nuevos datos dio lugar a una rápida sucesión de nuevas tecnologías, desde las redes generativas
+                     antagónicas (GAN) hasta los modelos de difusión, capaces de producir imágenes cada vez más realistas, aunque falsas.
+                      De esta manera, los VAE preparan el escenario para la IA generativa actual.
+                </p>
+                <p>
+                    Los autocodificadores se construyen a partir de bloques de codificadores y decodificadores, una arquitectura que 
+                    también sustenta los modelos de lenguaje de gran tamaño actuales. Los codificadores comprimen un conjunto de datos 
+                    en una representación densa, organizando puntos de datos similares más juntos en un espacio abstracto. Los decodificadores
+                     toman muestras de este espacio para crear algo nuevo al tiempo que conservan las características más importantes del
+                      conjunto de datos.
+                </p>
+                <p>
+                    La mayor ventaja de los autocodificadores es su capacidad para gestionar grandes lotes de datos y mostrar los 
+                    datos de entrada de forma comprimida, por lo que destacan los aspectos más significativos, como la detección de anomalías
+                     y las tareas de clasificación. Esto también acelera la transmisión y reduce los requisitos de almacenamiento. 
+                     Los autocodificadores se pueden entrenar con datos sin etiquetar para que puedan usarse cuando los datos etiquetados
+                     no estén disponibles. Cuando se utiliza el entrenamiento no supervisado, existe una ventaja de ahorro de tiempo: los 
+                     algoritmos de deep learning aprenden automáticamente y ganan precisión sin necesidad de ingeniería manual de 
+                     características. Además, los VAE pueden generar nuevos datos de muestra para la generación de texto o imágenes.
+                </p>
+                <p>
+                    Los autocodificadores tienen sus desventajas. El entrenamiento de estructuras profundas o intrincadas puede ser
+                     una pérdida de recursos computacionales. Y durante el entrenamiento no supervisado, el modelo puede pasar por 
+                     alto las propiedades necesarias y, en su lugar, simplemente replicar los datos de entrada. Los autocodificadores
+                      también pueden pasar por alto vínculos de datos complejos en datos estructurados, de modo que no identifiquen 
+                      correctamente las relaciones complejas.
+                </p>
+            </div>
+        </selection>
+    </main>
+
+</body>
+
+</html>

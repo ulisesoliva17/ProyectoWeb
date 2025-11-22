@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Machine Learning - conceptos, tipos, casos de uso y algoritmos" />
+  <meta name="keywords" content="Machine Learning, Aprendizaje Supervisado, No Supervisado, Refuerzo, IA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+  <title>FAI-AI — Machine Learning</title>
+</head>
+
+<body>
+  <!-- HEADER (estilo del archivo de ejemplo) -->
+  <header>
+    <div class="conjunto">
+      <div class="logo">
+        <a href="../index.html"><img src="../Imagenes/Logo.png" alt="logo"></a>
+      </div>
+      <div class="titulo">
+        <h1><a href="../index.html">N-AI</a></h1>
+      </div>
+    </div>
+
+    <nav class="nav-carousel">
+      <div class="nav-track">
+          <ul class="lista">
+              <li><a id="header-uno" class="link link--1" href="../index.html">Principal</a></li>
+              <li><a id="header-dos" class="link link--1" href="../html/ml.html">Machine Learning</a></li>
+              <li><a id="header-tres" class="link link--1" href="../html/dl.html">Deep Learning</a></li>
+          </ul>
+      </div>
+  </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-dl">
+    <!-- Hero -->
+    <h1 id="dl-h1">Machine Learning
+      <span>La rama práctica de la inteligencia artificial</span>
+    </h1>
+
+    <p>
+      El <strong>machine learning</strong> es una rama de la inteligencia artificial (IA) centrada en entrenar
+      computadoras y máquinas para imitar el modo en que aprenden los humanos, realizar tareas de forma autónoma y
+      mejorar su rendimiento y precisión a través de la experiencia y la exposición a más datos.
+    </p>
+
+    <!-- Tipos -->     <!--Tiene hecho el temple, funcionando-->
+    <section id="modelo">
+      <h2 id="modelo-h2">Tipos de aprendizaje</h2>
+      <div class="modelos-cajasml" id="tiposDeAprendizage">
+        <!--Inicio Plantilla Generica-->
+        <template id="plantilla-card">
+          <article class="card">
+            <h3></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+          </article>
+        </template>
+      
+      </div>
+    </section>
+
+    <!-- Separador -->
+    <!-- <hr /> -->
+
+    <!-- Casos de uso -->  <!--Tiene hecho el temple, funcionando-->
+    <section id="modelos">
+      <h2 id="modelos-h2">Casos de uso de machine learning en el mundo real</h2>
+
+      <div class="modelos-cajasml" id="casosDeUso"> <!-- div class="grid-casos" -->
+                   <template id="plantilla2">
+            <div class="caso">
+              <h3></h3>
+              <p></p>
+            </div>
+          </template>
+        
+ 
+      </div>
+    </section>
+
+    <!-- Algoritmos --> <!--Ver como reutilizo el temple de casos de uso, ya que es lo 
+                            mismo pero con una caja menos -->
+    <section id="modelos">
+      <h2 id="modelos-h2">Algoritmos más comunes de machine learning</h2>
+      <div class="modelos-cajasml">
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Redes neuronales</h3>
+          <p>
+            Simulan el funcionamiento del cerebro con nodos interconectados. Son excelentes para reconocer patrones y se
+            usan en traducción, reconocimiento de imágenes, voz y generación de contenido.
+          </p>
+        </div>
+        <!--</article>-->
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Regresión lineal</h3>
+          <p>
+            Se emplea para predecir valores numéricos basados en relaciones lineales entre variables (ej.: predicción de
+            precios de viviendas).
+          </p>
+        </div>
+        <!--</article>-->
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Regresión logística</h3>
+          <p>
+            Algoritmo supervisado para predecir variables categóricas (sí/no). Usado en clasificación de spam, control
+            de calidad, entre otros.
+          </p>
+        </div>
+        <!--</article>-->
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Agrupación en clústeres</h3>
+          <p>
+            Algoritmos no supervisados que identifican agrupaciones y diferencias en datos sin etiquetas, útiles en
+            segmentación de clientes y análisis exploratorio.
+          </p>
+        </div>
+        <!--</article>-->
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Árboles de decisión</h3>
+          <p>
+            Modelos interpretables que representan decisiones en forma de árbol. Pueden usarse para clasificación y
+            regresión; fáciles de validar y auditar.
+          </p>
+        </div>
+        <!--</article>-->
+
+        <!--<article class="algoritmo">-->
+        <div>
+          <h3>Bosques aleatorios</h3>
+          <p>
+            Conjuntos de árboles de decisión que combinan múltiples predictores para mejorar la robustez y reducir el
+            sobreajuste.
+          </p>
+        </div>
+      </div>
+      <!--</article>-->
+    </section>
+
+
+    <!-- Ventajas y desafíos -->  <!--Tiene hecho el temple, esta funcionando-->
+    <section id="section-areas">
+      <h2 id="ventajas">Ventajas, desafíos e impacto</h2>
+      <div class="VD-Grid" id="VentDes">
+
+        <template id="plantilla3">
+          <div id="area-cardml">
+          <h3></h3>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </template>
+
+        
+      </div>
+    </section>
+
+    <!-- Pie / CTA breve -->
+    <footer id="ml-footer">
+      <p>
+
+      </p>
+    </footer>
+  </main>
+  <script src="../js/ml.js"></script>
+</body>
+
+</html>

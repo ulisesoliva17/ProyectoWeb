@@ -1,0 +1,536 @@
+/* Gradient animado (debajo) + Grid infinito (arriba) */
+
+/* Modern dark blue → cyan */
+
+@import url("https://fonts.googleapis.com/css?family=Exo:100");
+
+/* Desplazamiento infinito del grid */
+
+@keyframes gridScroll {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+/* Movimiento del gradiente (suave) */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #e2e8f0;
+  font: 400 16px/1.5 "Exo", ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  /* Fallback por si no soporta gradientes */
+  background-color: #0c4a6e;
+  /* Crea contexto para z-index de pseudo-elementos */
+  position: relative;
+}
+
+/* Gradiente animado al fondo */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(-45deg, #000000, #21392b);
+  background-size: 500% 500%;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  animation: gradientShift 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Grid infinito por encima del gradiente */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px;
+  background-repeat: repeat, repeat;
+  background-position: 0 0, 0 0;
+  animation: gridScroll 2s linear infinite;
+  pointer-events: none; /* no bloquea clicks */
+}
+
+/* Asegura que el contenido quede arriba de ::before/::after */
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+/* #37465B */
+
+/*Agregado 29/09*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*d2ff00 amarillo fluo*/
+
+header .conjunto {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+header .conjunto .logo {
+  text-decoration: none;
+}
+
+header .conjunto .logo img {
+  width: 70px;
+}
+
+header .conjunto .titulo h1 {
+  letter-spacing: 1px;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1.3rem;
+}
+
+header .conjunto .titulo h1 a {
+  padding-left: 5px;
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+header .conjunto .titulo h1 a:visited {
+  color: #d2ff00;
+}
+
+header .lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 10px;
+  list-style: none;
+  font-size: 20px;
+}
+
+header .lista .link {
+  color: #d2ff00;
+  text-decoration: none;
+  display: flex;
+  padding: 15px 13px;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1rem;
+}
+
+/*--------------------HEADER CARRUSEL-----------------------------*/
+
+/* Header marquee por item usando IDs */
+@keyframes headerMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 100%));
+  }
+}
+
+.nav-carousel {
+  overflow: hidden;
+  flex: 1 1 auto;
+  height: calc(1.5em + 30px);
+}
+
+.nav-carousel .nav-track {
+  position: relative;
+  height: 100%;
+}
+
+.nav-carousel .lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+.nav-carousel .lista .link {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Fuerza pausa con alta especificidad (IDs) */
+header:hover #header-uno,
+header:hover #header-dos,
+header:hover #header-tres {
+  animation-play-state: paused;
+}
+
+/* Espaciado visual entre palabras al reentrar */
+#header-uno {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 0s;
+}
+#header-dos {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 2s;
+}
+#header-tres {
+  animation: headerMarquee 10s linear infinite;
+  animation-delay: 4s;
+}
+
+/*--------------------INDEX-----------------------------*/
+
+#domi {
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 3.5rem;
+}
+
+.body .imgPrin {
+  width: 30rem;
+}
+
+.imgSwap {
+  position: relative;
+  display: block;
+  width: 30rem;
+  height: 30rem; /* le das aire */
+  margin: 3rem auto; /* separarlo del resto y centrarlo */
+}
+
+/* Imagen base (cerebro) */
+.imgSwap .imgPrin {
+  width: 30rem;
+  display: block;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translate(-50%, -50%) scale(0.8); 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* GIF del robot */
+.imgSwap .imgAlt {
+  position: absolute;
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+/* Hover */
+.imgSwap:hover .imgPrin {
+  opacity: 0;
+}
+
+.imgSwap:hover .imgAlt {
+  opacity: 0.8;
+}
+
+.parrafos-prin {
+  display: flex;
+  padding: 3.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.parrafos-prin > p {
+  padding: 10rem;
+  font-size: 1.5rem;
+}
+#p1-prin {
+  margin: 2rem;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: bold; /* más grueso */
+  transform: rotate(-30deg); /* lo inclina 30 grados */
+  text-align: center;
+  color: white;
+  font-family: "BBH Sans Bartle", sans-serif;
+}
+/*----------------------FIN INDEX-----------------------*/
+
+/*----------------------DEEP LEARNING-------------------*/
+
+#main-dl {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  /* equivalente a 1152px */
+  padding-left: 1.5rem;
+  /* 24px */
+  padding-right: 1.5rem;
+  /* 24px */
+  padding-top: 4rem;
+  /* 64px */
+  padding-bottom: 6rem;
+  /* 96px */
+}
+#dl-h1 {
+  text-align: center;
+}
+
+#descripcion {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+}
+
+.titulosHovers > span {
+  color: #d2ff00;
+  transition: color 0.5s ease;
+  display: inline-block;
+  font-weight: 700; /* o "bold" */
+  font-size: 2rem; /* ajustá según tu diseño */
+}
+
+.titulosHovers > span:hover {
+  color: #000;
+}
+
+#descripcion-lista {
+  list-style-type: none;
+}
+
+#modelos-h2 {
+  margin-top: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #000000;
+}
+
+#modelos-h2 {
+  color: #08c6ab;
+}
+
+#modelo-h2 {
+  color: #08c6ab;
+}
+
+.modelos-cajas {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  /*Hueco entre filas y columnas*/
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.modelos-cajas > article {
+  /*border: 1px solid #e5e7eb;*/
+  background: #1c2813; /* color interno oscuro #00183a */
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.modelos-cajas > article > div > span {
+  background-color: #d2ff00;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 3px;
+  margin: 10px;
+}
+.modelos-cajas > article > div > span > a {
+  font-weight: 700; /* o bold */
+  color: #000000; /* el color que quieras */
+  text-decoration: none; /* saca el subrayado */
+}
+
+.modelos-cajas > article > div > div {
+  padding-top: 10px;
+}
+/*
+#modelos-caja,h3,p,span,em{
+background: rgba(255, 255, 255, 0.02);
+}*/
+
+#areas {
+  margin-top: 4rem;
+  /* mt-16 */
+  border-radius: 1.5rem;
+  /* rounded-3xl */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* border-white/20 */
+  padding: 1.5rem;
+  /* p-6 */
+  backdrop-filter: blur(12px);
+  /* backdrop-blur-md */
+}
+
+#ventajas {
+  color: #08c6ab;
+}
+
+#areas-h2 {
+  color: #08c6ab;
+}
+
+#areas-grid {
+  margin-top: 1.5rem;
+  /* mt-6 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  /*display: flex;*/
+  flex-direction: row;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0);
+  /*Fondo tranparente*/
+}
+
+.VD-Grid {
+  margin-top: 1.5rem;
+  /* mt-6 */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /*display: flex;*/
+  flex-direction: row;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0);
+  /*Fondo tranparente*/
+}
+
+#area-card {
+  border-radius: 1rem;
+  /* rounded-2xl */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  /* p-5 */
+}
+
+.modelos-cajas-cnn {
+  background-image: linear-gradient(
+      45deg,
+      #0d1117 0%,
+      /* azul oscuro casi negro en el top */ #0f2233 20%,
+      /* azul profundo */ #1b1d3b 55%,
+      /* transición hacia púrpura */ #2a0845 100%
+        /* violeta/morado profundo abajo */
+    ),
+    linear-gradient(220deg, #00ffd5, #8c52ff);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+#modelos-h2-cnn {
+  color: #08c6ab;
+}
+
+/*----------------------------------------------------------------------*/
+.modelos-cajasml {
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+      45deg,
+      #0d1117 0%,
+      /* azul oscuro casi negro en el top */ #0f2233 20%,
+      /* azul profundo */ #1b1d3b 55%,
+      /* transición hacia púrpura */ #2a0845 100%
+        /* violeta/morado profundo abajo */
+    ),
+    linear-gradient(220deg, #00ffd5, #8c52ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  /*Hueco entre filas y columnas*/
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.modelos-cajasml > article {
+  /*border: 1px solid #e5e7eb;*/
+  background: #00337a; /* color interno oscuro #00183a */
+  border: 2px solid transparent; /* el borde real es transparente */
+  border-radius: 12px;
+  /* gradiente aplicado al borde */
+  background-image: linear-gradient(#0d1117, #0d1117),
+    linear-gradient(90deg, #365faa, #365faa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 10px;
+}
+
+.modelos-cajasml > article > div > span {
+  background-color: #8c52ff;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 3px;
+  margin: 10px;
+}
+
+.modelos-cajasml > article > div > div {
+  padding-top: 10px;
+}
+#area-cardml {
+  border-radius: 1rem;
+  /* rounded-2xl */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  /* p-5 */
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+/*Lo agrego para que a la hora de hacer scrool no me pareza primero y despues me haga el efecto
+sino para que me haga el efecto de una*/
+.modelos-cajas,
+.modelos-cajas > article,
+#area-card {
+  opacity: 0; /* Oculto al inicio */
+  transition: opacity 0.3s ease;
+}
