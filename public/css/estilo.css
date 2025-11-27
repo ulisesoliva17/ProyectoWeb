@@ -284,11 +284,21 @@ header:hover #header-tres {
   margin: 2rem;
   font-size: 6rem;
   font-style: normal;
-  font-weight: bold; /* más grueso */
+  font-weight: bold; /* mas grueso */
   transform: rotate(-30deg); /* lo inclina 30 grados */
   text-align: center;
   color: white;
   font-family: "BBH Sans Bartle", sans-serif;
+}
+.infoImg {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.infoImg > .info {
+  width: 85rem;
 }
 /*----------------------FIN INDEX-----------------------*/
 
