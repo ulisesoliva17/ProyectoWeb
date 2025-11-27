@@ -1,19 +1,17 @@
-const express = require("express");
-const path = require("path");
+const express = require("express"); //para crear el servidor y manejar rutas.
+const path = require("path"); // para construir rutas de archivos
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; //definimos puertos
 
-// Importamos las rutas
+// Importamos las rutas, cargamos los routers donde estan definidos los endpoint
 const dlRoutes = require("./routes/dl.routes");
 const mlRoutes = require("./routes/ml.routes");
 
 const PUBLIC_PATH = path.join(__dirname, "public");
 
-
 app.use(express.static(PUBLIC_PATH));
 app.use(express.json());
-
 
 // ASIGNACIÓN DE RUTAS
 
