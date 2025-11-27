@@ -1,17 +1,19 @@
 const express = require("express");
 const router = express.Router(); //creamos un mini-servidor
-const fs = require("fs"); // permite leer/escribir
+const fs = require("fs"); // libreria que permite leer/escribir
 const path = require("path"); //para construir rutas de archivos
 
-//Dir del json, __dirname(directorio actual)
+//Dir del json, __dirname(directorio actual) vamos del actual a destino
 const JSON_PATH = path.join(__dirname, "..", "jsons", "dl.json");
 
 // Helper interno (solo para este archivo)
+//Convierte esa cadena en un objeto JavaScript.
 function leerJSON() {
-  return JSON.parse(fs.readFileSync(JSON_PATH, "utf8")); //Convierte esa cadena en un objeto JavaScript.
+  return JSON.parse(fs.readFileSync(JSON_PATH, "utf8")); 
 }
+//escribimos en el archivo JSON_PATH
 function escribirJSON(data) {
-  fs.writeFileSync(JSON_PATH, JSON.stringify(data, null, 2), "utf8"); //escribimos en el archivo JSON_PATH
+  fs.writeFileSync(JSON_PATH, JSON.stringify(data, null, 2), "utf8"); 
 }
 
 //req, solicitud del cliente al servidor

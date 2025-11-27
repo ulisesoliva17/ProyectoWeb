@@ -8,12 +8,15 @@ const PORT = process.env.PORT || 3000; //definimos puertos
 const dlRoutes = require("./routes/dl.routes");
 const mlRoutes = require("./routes/ml.routes");
 
+//Constante de la carpeta publica
 const PUBLIC_PATH = path.join(__dirname, "public");
-
+//Si alguien pide un archivo (imagen, CSS, JS del frontend)
+//  búscalo automáticamente en la carpeta public y entrégalo
 app.use(express.static(PUBLIC_PATH));
+//Podemos leer alchivos jsons
 app.use(express.json());
 
-// ASIGNACIÓN DE RUTAS
+// Asignamos Rutas
 
 //"Todo lo que empiece con /api/dl, mándalo al archivo dlRoutes"
 app.use("/api/dl", dlRoutes);
@@ -28,6 +31,8 @@ app.get("/", (_req, res) => {
   res.sendFile(path.join(PUBLIC_PATH, "index.html"));
 });
 
+//Le decimos a Node.js que se quede "escuchando" en el puerto 
+// 3000 esperando a que lleguen usuarios o peticiones.
 app.listen(PORT, () => {
   console.log(`Servidor listo en http://localhost:${PORT}`);
 });
