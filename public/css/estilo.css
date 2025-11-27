@@ -98,8 +98,10 @@ header {
 header .conjunto {
   display: flex;
   align-items: center;
-  padding-top: 5px;
-  padding-left: 5px;
+  padding: 5px;
+  margin: 5px;
+  background-color: black;
+  border-radius: 5px;
 }
 
 header .conjunto .logo {
@@ -114,17 +116,18 @@ header .conjunto .titulo h1 {
   letter-spacing: 1px;
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1.3rem;
+
 }
 
 header .conjunto .titulo h1 a {
-  padding-left: 5px;
   text-decoration: none;
   list-style: none;
   color: #000;
+  padding-right: 12px;
 }
 
 header .conjunto .titulo h1 a:visited {
-  color: #d2ff00;
+  color: #d2ff00; 
 }
 
 header .lista {
@@ -463,8 +466,19 @@ background: rgba(255, 255, 255, 0.02);
   box-sizing: border-box;
 }
 
-#modelos-h2-cnn {
-  color: #08c6ab;
+#modelos-h2 {
+  color: #d2ff00;
+  transition: color 0.5s ease;
+  display: inline-block;
+  font-weight: 700; /* o "bold" */
+  font-size: 2rem; /* ajustá según tu diseño */
+}
+#ventajas{
+  color: #d2ff00;
+  transition: color 0.5s ease;
+  display: inline-block;
+  font-weight: 700; /* o "bold" */
+  font-size: 2rem; /* ajustá según tu diseño */
 }
 
 /*----------------------------------------------------------------------*/
