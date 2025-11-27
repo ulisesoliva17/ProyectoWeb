@@ -342,13 +342,6 @@ header:hover #header-tres {
   color: #000000;
 }
 
-#modelos-h2 {
-  color: #08c6ab;
-}
-
-#modelo-h2 {
-  color: #08c6ab;
-}
 
 .modelos-cajas {
   border-radius: 0.5rem;
@@ -386,10 +379,7 @@ header:hover #header-tres {
 .modelos-cajas > article > div > div {
   padding-top: 10px;
 }
-/*
-#modelos-caja,h3,p,span,em{
-background: rgba(255, 255, 255, 0.02);
-}*/
+
 
 #areas {
   margin-top: 4rem;
@@ -402,14 +392,6 @@ background: rgba(255, 255, 255, 0.02);
   /* p-6 */
   backdrop-filter: blur(12px);
   /* backdrop-blur-md */
-}
-
-#ventajas {
-  color: #08c6ab;
-}
-
-#areas-h2 {
-  color: #08c6ab;
 }
 
 #areas-grid {
@@ -445,25 +427,6 @@ background: rgba(255, 255, 255, 0.02);
   background: rgba(0, 0, 0, 0.2);
   padding: 1.25rem;
   /* p-5 */
-}
-
-.modelos-cajas-cnn {
-  background-image: linear-gradient(
-      45deg,
-      #0d1117 0%,
-      /* azul oscuro casi negro en el top */ #0f2233 20%,
-      /* azul profundo */ #1b1d3b 55%,
-      /* transición hacia púrpura */ #2a0845 100%
-        /* violeta/morado profundo abajo */
-    ),
-    linear-gradient(220deg, #00ffd5, #8c52ff);
-
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-top: 1.5rem;
-  box-sizing: border-box;
 }
 
 #modelos-h2 {
