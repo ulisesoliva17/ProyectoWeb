@@ -120,10 +120,10 @@ function crearCardCNN(item) {
 async function cargarCardsCNN() {
   try {
     // Llamada al endpoint REST que devuelve el JSON
-    const respuesta = await fetch("/api/dl");
+    const respuesta = await fetch("/api/dl"); //Le hace la petición GET al endpoint /api/dl del servidor
 
     // Parseo de la respuesta como JSON
-    const datos = await respuesta.json();
+    const datos = await respuesta.json(); //Convierte la respuesta en un objeto JavaScript.
 
     // Contenedor donde se inyectarán las cards
     const contenedor = document.getElementById("contenedorModeloPrincipal");
